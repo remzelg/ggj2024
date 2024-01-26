@@ -1,0 +1,68 @@
+* Game Design Doc: Stand Up Show Down
+** Scenes
+*** MainMenu.tscn
+The main menu should start with splash menu.
+Start button should transition to the connectUsers scene.
+Settings should transition to a in-scene settings menu, hiding the splashmenu.
+Quit quits the application.
+**** Nodes
+***** Background
+***** SplashMenu
+****** Buttons (in a vbox and/or margin)
+****** Title (anim possibly)
+
+****** (Animated elements optionally)
+***** SettingsMenu
+****** Setting sliders/ buttons (in vbox / margins)
+***** AudioStreamPlayer
+**** Scripts
+***** MainMenu.gd
+In charge of event listeners for the splashMenu and settings buttons, and switching to the CharacterSelect scene
+*** CharacterSelectMenu.tscn
+The character select scene has a prompt for players to join the game session, and to select a character to play.
+Also displays a short description and stat breakdown.
+**** Nodes
+***** Background
+***** CharacterScreens
+****** CharacterSelect.tscn (x4)
+******* ProfileArt
+******* JoinLabel
+******* Statpreview
+******* CharacterDescription
+***** StartButton
+**** Scripts
+***** CharacterSelectMenu.gd
+Should initialize signals from the character select subscenes to undisable the startbutton, and connect DeviceInput devices to them when users join.
+Should set singleton PlayerController.gd values before transitioning to the GameController scene.
+***** CharacterSelect.gd
+Should take the initialized and/or exported device int and use that to listen for player inputs.
+Should start with everything hidden except #JoinLabel.
+*** GameController.tscn
+The Game Controller is a ControlNode inherited class node, which is a holder for both the background/overworld as well as the theater.
+**** Nodes
+***** Overworld (canvas item)
+****** Background
+****** locations
+******* Location.tscn x?
+****** Pawns
+******* Pawn.tscn x2-4 (initialized at runtime)
+***** Theater.tscn
+**** Scripts
+***** GameController.gd
+This will likely be a very large file.
+It should initialize 
+
+*** Overworld.tscn
+*** Theater.tscn
+*** Location.tscn
+*** PlayerController.tscn
+*** Showdown.tscn
+*** Pawn.tscn
+*** ToolTip.tscn
+** Resources
+*** Player.tres
+*** TheaterEvent.tres
+*** DescisionEffect.tres
+*** TheaterActorMap.tres
+*** Showdown/Joke.tres
+*** Showdown/BoardState.tres
