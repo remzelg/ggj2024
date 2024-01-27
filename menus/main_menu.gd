@@ -1,5 +1,8 @@
 extends Control
 
+func move_to_character_select():
+	get_tree().change_scene_to_file("res://menus/character_select_menu.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -20,7 +23,8 @@ func _on_quit_button_pressed():
 	get_tree().quit() # Replace with function body.
 
 func _on_start_button_pressed():
-	pass
+	$AnimationPlayer.play("fade out")
+	$Fader.set_visible(true)
 	
 func _on_audio_slider_value_changed(value):
 	GameSettings.audioLevel = value
