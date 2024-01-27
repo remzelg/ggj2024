@@ -15,6 +15,7 @@ func set_player_resources(player_id, resource):
 	
 func get_player_ids() -> Array[int]:
 	if !_initialized:
+		_initialized = true
 		for i in playerCount:
 			player_ids.append(i)
 	return player_ids

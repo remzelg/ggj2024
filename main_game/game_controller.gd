@@ -47,7 +47,7 @@ func tick() -> void:
 		totalTurns = 2
 		currentTurn = 1
 		playerPtr = -1
-		
+		turns_init = true
 
 	playerPtr += 1
 	if playerPtr == PlayerManager.playerCount:
@@ -61,6 +61,7 @@ func tick() -> void:
 
 	var nextPlayer = PlayerManager.get_player_ids()[playerPtr]
 	init_player(nextPlayer)
+	print("tick\n\tturns " + str(currentTurn) + "/" + str(totalTurns) + "\n\tptrs " + str(playerPtr) + " for " + str(PlayerManager.get_player_ids()) + "\n\t\t" + str(PlayerManager.playerCount))
 	
 func _process(delta):
 	pass
