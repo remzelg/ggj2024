@@ -49,13 +49,13 @@ func draw_character_selections():
 
 func toggle_selected(character, visible):
 	if character == 1:
-		$HBoxContainer2/Row2/CharacterSelector1/CharacterSelect1/Selected.visible = visible
+		$MarginContainer/HBoxContainer2/Row2/CharacterSelector1/CharacterSelect1/Selected.visible = visible
 	elif character == 2:
-		$HBoxContainer2/Row3/CharacterSelector2/CharacterSelect2/Selected.visible = visible
+		$MarginContainer/HBoxContainer2/Row3/CharacterSelector2/CharacterSelect2/Selected.visible = visible
 	elif character == 3:
-		$HBoxContainer2/Row3/CharacterSelector3/CharacterSelect3/Selected.visible = visible
+		$MarginContainer/HBoxContainer2/Row3/CharacterSelector3/CharacterSelect3/Selected.visible = visible
 	elif character == 4:
-		$HBoxContainer2/Row4/CharacterSelector4/CharacterSelect4/Selected.visible = visible
+		$MarginContainer/HBoxContainer2/Row4/CharacterSelector4/CharacterSelect4/Selected.visible = visible
 
 func begin_game():
 	var players = {}
