@@ -26,7 +26,6 @@ func _on_player_count_back_button_pressed():
 	$PlayerCountMenu.set_visible(false)
 	$SplashMenu.set_visible(true) # Replace with function body.
 
-
 func _on_splash_start_button_pressed():
 	$AnimationPlayer.play("fade out")
 	$SplashMenu.set_visible(false) # Replace with function body.

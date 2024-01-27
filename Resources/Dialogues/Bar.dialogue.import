@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://du22gajvgsvi7"
+path="res://.godot/imported/Bar.dialogue-0174e3892d944ef50aaca8801f9afa97.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/Bar.dialogue"
+dest_files=["res://.godot/imported/Bar.dialogue-0174e3892d944ef50aaca8801f9afa97.tres"]
+
+[params]
+
+defaults=true
