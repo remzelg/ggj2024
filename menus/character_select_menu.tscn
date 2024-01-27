@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck13fpiwqlr6q"]
+
+[ext_resource type="PackedScene" uid="uid://d082uyd6n863a" path="res://menus/character_selector.tscn" id="1_30g44"]
+
+[node name="CharacterSelectMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Row1" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="CharacterSelector1" parent="HBoxContainer/Row1" instance=ExtResource("1_30g44")]
+layout_mode = 2
+
+[node name="CharacterSelector3" parent="HBoxContainer/Row1" instance=ExtResource("1_30g44")]
+layout_mode = 2
+
+[node name="Row2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="CharacterSelector2" parent="HBoxContainer/Row2" instance=ExtResource("1_30g44")]
+layout_mode = 2
+
+[node name="CharacterSelector4" parent="HBoxContainer/Row2" instance=ExtResource("1_30g44")]
+layout_mode = 2
