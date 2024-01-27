@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_171tw")
 
-[node name="Overworld" type="CanvasLayer" parent="."]
+[node name="Overworld" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Overworld"]
 anchors_preset = 15
@@ -24,11 +24,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.196078, 0.52549, 0.435294, 1)
-
-[node name="Pawns" type="Node" parent="Overworld"]
-
-[node name="Pawn" parent="Overworld/Pawns" instance=ExtResource("2_mxtet")]
-position = Vector2(403, 173)
 
 [node name="Locations" type="Node" parent="Overworld"]
 
@@ -47,6 +42,11 @@ animation_prefix = "cafe"
 [node name="Library" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(948, 484)
 animation_prefix = "library"
+
+[node name="Pawns" type="Node" parent="Overworld"]
+
+[node name="Pawn" parent="Overworld/Pawns" instance=ExtResource("2_mxtet")]
+position = Vector2(403, 173)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

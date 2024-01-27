@@ -16,3 +16,6 @@ func _ready():
 func _process(delta):
 	var move = input.get_vector("move_left", "move_right", "move_up", "move_down")
 	position += move
+
+func get_pos():
+	return 

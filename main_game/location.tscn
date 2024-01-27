@@ -4,6 +4,9 @@
 [ext_resource type="Script" path="res://main_game/location.gd" id="1_lfu6m"]
 
 [node name="Location" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(-1.90735e-06, -1.90735e-06)
+scale = Vector2(3.875, 3.875)
 sprite_frames = ExtResource("1_c0maw")
 animation = &"apartment_selected"
 script = ExtResource("1_lfu6m")

@@ -16,3 +16,4 @@ func _process(delta):
 
 func get_pos():
 	return to_global($Pivot.position)
+
