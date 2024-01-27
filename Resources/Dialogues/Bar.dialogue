@@ -6,7 +6,7 @@ Nathan: Here are some choices.
 	Nathan: You drink a beer. Have another?
 	=> BAR_CHOICE
 - Work the bar crowd
-	Nathan: Please don't.
+	Nathan: ... Please don't.
 	=> BAR_CHOICE
 - End the conversation => END
 => END

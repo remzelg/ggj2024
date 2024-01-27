@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ck13fpiwqlr6q"]
+[gd_scene load_steps=11 format=3 uid="uid://ck13fpiwqlr6q"]
 
 [ext_resource type="Theme" uid="uid://dhp4a5h1vnf4j" path="res://themes/main/main_theme.tres" id="1_5jfm0"]
 [ext_resource type="PackedScene" uid="uid://d082uyd6n863a" path="res://menus/character_selector.tscn" id="1_30g44"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://depes5k2nckqw" path="res://assets/Art/570636E5-15DB-4F9D-9561-268684B9CED6.png" id="7_aflhs"]
 [ext_resource type="Texture2D" uid="uid://c4kwpguqq4pq4" path="res://assets/Art/7222411D-13A1-42FF-9FCB-43223CB7942A.png" id="8_ro1l6"]
 [ext_resource type="Texture2D" uid="uid://okikl2wt6ykl" path="res://assets/Art/24F8141A-2B5A-40CB-864C-FFB0CEE780E8.png" id="9_e5hf0"]
+[ext_resource type="AudioStream" uid="uid://cmgq4gj66lvum" path="res://assets/music/Menu.mp3" id="10_av85a"]
 
 [node name="CharacterSelectMenu" type="Control"]
 layout_mode = 3
@@ -184,6 +185,10 @@ offset_top = 110.0
 offset_right = 104.0
 offset_bottom = 174.0
 texture = ExtResource("6_i1vnv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_av85a")
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer2/Row2/CharacterSelector1/CharacterSelect1" to="." method="_on_character_select_1_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer2/Row3/CharacterSelector2/CharacterSelect2" to="." method="_on_character_select_2_pressed"]

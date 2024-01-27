@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LocationEvent" load_steps=3 format=3 uid="uid://cdnrnkleqfp5u"]
+[gd_resource type="Resource" script_class="LocationEvent" load_steps=3 format=3 uid="uid://cckqhcmwhs6nc"]
 
 [ext_resource type="Script" path="res://Resources/location_event.gd" id="1_ja14w"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://62q535jvutkq"]
+[gd_scene load_steps=9 format=3 uid="uid://62q535jvutkq"]
 
 [ext_resource type="Script" path="res://main_game/game_controller.gd" id="1_171tw"]
 [ext_resource type="PackedScene" uid="uid://dlf4e2e3e3dqd" path="res://main_game/pawn.tscn" id="2_mxtet"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://main_game/Options.gd" id="5_0txgh"]
 [ext_resource type="PackedScene" uid="uid://tmeu7byt1vo6" path="res://main_game/option_button.tscn" id="5_b8djh"]
 [ext_resource type="PackedScene" uid="uid://dwbi7r0i4y6qr" path="res://main_game/confirm_popup.tscn" id="6_ajkyk"]
+[ext_resource type="AudioStream" uid="uid://bynjbm7a6b3kk" path="res://assets/music/Townsong.mp3" id="8_8d5ve"]
 
 [node name="GameController" type="Control"]
 layout_mode = 3
@@ -144,6 +145,10 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_8d5ve")
+autoplay = true
 
 [connection signal="game_end" from="." to="." method="_on_game_end"]
 [connection signal="no" from="UI/ConfirmPopup" to="." method="_on_confirmation_no"]
