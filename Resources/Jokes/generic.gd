@@ -8,5 +8,7 @@ class_name GenericJoke
 @export var observation_compatability:int = 0
 @export var difficulty:int = 0
 @export var tags:Array[String]
+@export var category:String
+@export var display_name:String
 
 @export_file var dialogue

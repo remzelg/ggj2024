@@ -18,7 +18,7 @@ var example = load("res://Resources/Dialogues/example.dialogue")
 func _ready():
 	DialogueManager.get_current_scene = get_joke_container
 	curr_player = PlayerManager.players[0]
-	DialogueManager.show_joke_balloon(example, "start")
+	#DialogueManager.show_joke_balloon(example, "start")
 	$"2DScene/Actors/Lion".curr_marker = "Active"
 	$"2DScene/Actors/Possum".curr_marker = "Next"
 	$"2DScene/Actors/Dolphin".curr_marker = "Last"
@@ -30,6 +30,7 @@ func _ready():
 
 
 func next_up():
+	
 	change_positions()
 	
 func tween_to_next_marker(actor):

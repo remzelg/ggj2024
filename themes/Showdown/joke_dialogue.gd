@@ -3,7 +3,7 @@ extends Control
 @onready var input = DeviceInput.new(-1)
 func _ready():
 	
-		Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
+	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
 ## The action to use for advancing the dialogue
 const NEXT_ACTION = &"ui_accept"
