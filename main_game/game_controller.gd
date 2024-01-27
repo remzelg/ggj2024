@@ -9,8 +9,6 @@ var last_location
 @onready var _library = $Overworld/Locations/Library
 @onready var _apartment = $Overworld/Locations/Apartment
 
-@onready var example = load("res://Resources/Dialogues/example.dialogue")
-
 @onready var get_ui_node: Callable = func():
 	return $UI
 
