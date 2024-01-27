@@ -7,7 +7,7 @@ Label/colors/font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_ltriq"]
 resource_name = "fade out"
-length = 2.0
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -15,7 +15,7 @@ tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 2),
+"times": PackedFloat32Array(0.1, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
@@ -27,7 +27,7 @@ tracks/1/path = NodePath("..")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2),
+"times": PackedFloat32Array(0.4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -150,7 +150,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 0)
+color = Color(0.666667, 0.666667, 0.666667, 0.333333)
 
 [connection signal="pressed" from="SplashMenu/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="SplashMenu/SettingsButton" to="." method="_on_settings_button_pressed"]
