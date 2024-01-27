@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://62q535jvutkq"]
+[gd_scene load_steps=5 format=3 uid="uid://62q535jvutkq"]
 
 [ext_resource type="Script" path="res://main_game/game_controller.gd" id="1_171tw"]
+[ext_resource type="PackedScene" uid="uid://dlf4e2e3e3dqd" path="res://main_game/pawn.tscn" id="2_mxtet"]
+[ext_resource type="PackedScene" uid="uid://bec1hg1g3n68v" path="res://main_game/location.tscn" id="3_5osb3"]
+[ext_resource type="PackedScene" uid="uid://d3ovmlsn67rv5" path="res://main_game/player_card.tscn" id="4_1ulc1"]
 
 [node name="GameController" type="Control"]
 layout_mode = 3
@@ -14,5 +17,52 @@ script = ExtResource("1_171tw")
 [node name="Overworld" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="Overworld"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.52549, 0.435294, 1)
+
+[node name="Pawns" type="Node" parent="Overworld"]
+
+[node name="Pawn" parent="Overworld/Pawns" instance=ExtResource("2_mxtet")]
+
+[node name="Locations" type="Node" parent="Overworld"]
+
+[node name="Location" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PlayerCards" type="Node" parent="UI"]
+
+[node name="PlayerCard" parent="UI/PlayerCards" instance=ExtResource("4_1ulc1")]
+
+[node name="PlayerCard2" parent="UI/PlayerCards" instance=ExtResource("4_1ulc1")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_right = 0.0
+grow_horizontal = 0
+
+[node name="PlayerCard3" parent="UI/PlayerCards" instance=ExtResource("4_1ulc1")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_bottom = 0.0
+grow_vertical = 0
+
+[node name="PlayerCard4" parent="UI/PlayerCards" instance=ExtResource("4_1ulc1")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
