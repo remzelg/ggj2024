@@ -12,9 +12,6 @@ func get_player_device(player_id):
 
 func set_player_resources(player_id, resource):
 	player_resources[player_id] = resource
-
-func get_player_device(player_id):
-	return players[player_id]
 	
 func get_player_ids() -> Array[int]:
 	if !_initialized:
