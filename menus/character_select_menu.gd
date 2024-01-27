@@ -66,4 +66,5 @@ func begin_game():
 		i += 1
 
 	PlayerManager.players = players
+	PlayerManager.playerCount = i
 	get_tree().change_scene_to_file("res://main_game/game_controller.tscn")
