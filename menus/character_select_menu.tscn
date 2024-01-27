@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ck13fpiwqlr6q"]
+[gd_scene load_steps=6 format=3 uid="uid://ctmbg3sh6l2d8"]
 
-[ext_resource type="PackedScene" uid="uid://d082uyd6n863a" path="res://menus/character_selector.tscn" id="1_30g44"]
+[ext_resource type="Theme" uid="uid://dhp4a5h1vnf4j" path="res://themes/main/main_theme.tres" id="1_5jfm0"]
+[ext_resource type="PackedScene" path="res://menus/character_selector.tscn" id="1_30g44"]
+[ext_resource type="Script" path="res://menus/character_select_menu.gd" id="2_klytr"]
+[ext_resource type="Texture2D" uid="uid://ds5n7g42i1ht6" path="res://assets/lion.jpg" id="3_fdsoa"]
+[ext_resource type="Script" path="res://menus/character_selector.gd" id="4_8yt22"]
 
 [node name="CharacterSelectMenu" type="Control"]
 layout_mode = 3
@@ -9,31 +13,96 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_5jfm0")
+script = ExtResource("2_klytr")
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Row1" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(640, 0)
 layout_mode = 2
 
 [node name="CharacterSelector1" parent="HBoxContainer/Row1" instance=ExtResource("1_30g44")]
+custom_minimum_size = Vector2(640, 0)
 layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_8yt22")
 
-[node name="CharacterSelector3" parent="HBoxContainer/Row1" instance=ExtResource("1_30g44")]
-layout_mode = 2
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/Row1/CharacterSelector1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -82.5
+offset_right = 110.0
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(110, 80)
+texture_normal = ExtResource("3_fdsoa")
 
 [node name="Row2" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(640, 0)
 layout_mode = 2
 
-[node name="CharacterSelector2" parent="HBoxContainer/Row2" instance=ExtResource("1_30g44")]
+[node name="CharacterSelector1" parent="HBoxContainer/Row2" instance=ExtResource("1_30g44")]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+script = ExtResource("4_8yt22")
 
-[node name="CharacterSelector4" parent="HBoxContainer/Row2" instance=ExtResource("1_30g44")]
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/Row2/CharacterSelector1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(110, 80)
+texture_normal = ExtResource("3_fdsoa")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 549.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(640, 87)
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+modulate = Color(0.0980392, 0.0980392, 0.0980392, 1)
 layout_mode = 2
+size_flags_horizontal = 4
+text = "Select your character!"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/Row1/CharacterSelector1/TextureButton" to="." method="_on_texture_button1_pressed"]
+[connection signal="pressed" from="HBoxContainer/Row2/CharacterSelector1/TextureButton" to="." method="_on_texture_button2_pressed"]

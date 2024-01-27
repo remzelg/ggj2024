@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dhp4a5h1vnf4j"]
+
+[ext_resource type="StyleBox" uid="uid://cf2tpm2s11fyr" path="res://themes/main/btton_default.tres" id="1_38sqb"]
+
+[resource]
+Button/colors/font_color = Color(0.329412, 0.992157, 0.909804, 1)
+Button/styles/disabled = ExtResource("1_38sqb")
