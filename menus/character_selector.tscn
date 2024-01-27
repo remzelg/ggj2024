@@ -1,5 +1,8 @@
-[gd_scene format=3 uid="uid://d082uyd6n863a"]
+[gd_scene load_steps=2 format=3 uid="uid://d082uyd6n863a"]
+
+[ext_resource type="Script" path="res://main_game/character_selector.gd" id="1_n1gs3"]
 
 [node name="CharacterSelector" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_n1gs3")

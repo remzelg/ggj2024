@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctmbg3sh6l2d8"]
+[gd_scene load_steps=6 format=3 uid="uid://ck13fpiwqlr6q"]
 
 [ext_resource type="Theme" uid="uid://dhp4a5h1vnf4j" path="res://themes/main/main_theme.tres" id="1_5jfm0"]
-[ext_resource type="PackedScene" path="res://menus/character_selector.tscn" id="1_30g44"]
+[ext_resource type="PackedScene" uid="uid://d082uyd6n863a" path="res://menus/character_selector.tscn" id="1_30g44"]
 [ext_resource type="Script" path="res://menus/character_select_menu.gd" id="2_klytr"]
 [ext_resource type="Texture2D" uid="uid://ds5n7g42i1ht6" path="res://assets/lion.jpg" id="3_fdsoa"]
 [ext_resource type="Script" path="res://menus/character_selector.gd" id="4_8yt22"]

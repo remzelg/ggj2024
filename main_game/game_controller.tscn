@@ -38,7 +38,7 @@ animation_prefix = "bar"
 
 [node name="Apartment" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(901, 215)
-animation_prefix = "Apartment"
+animation_prefix = "apartment"
 
 [node name="Cafe" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(384, 520)

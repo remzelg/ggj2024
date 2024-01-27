@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_settings_button_pressed():
-	$SplashMenu.visible = false
+	$SplashMenu.set_visible(true)
 	$SettingsMenu.visible = true # Replace with function body.
 
 
@@ -23,3 +23,7 @@ func _on_back_button_pressed():
 
 func _on_quit_button_pressed():
 	get_tree().quit() # Replace with function body.
+
+
+func _on_start_button_pressed():
+	pass
