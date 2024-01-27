@@ -12,4 +12,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if curr_marker == "Active":
+		z_index = 2
+		if animation != _talking:
+			play(_talking)
+	else:
+		z_index = 1
+		if curr_marker == "Last":
+			z_index = 0
+		if animation == _talking:
+			play(_default)
 	pass

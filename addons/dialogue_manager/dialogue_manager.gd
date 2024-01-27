@@ -275,6 +275,13 @@ func show_dialogue_balloon(resource: DialogueResource, title: String = "", extra
 	get_current_scene.call().add_child(balloon)
 	balloon.start(resource, title, extra_game_states)
 	return balloon
+## Show the configured dialogue balloon
+func show_joke_balloon(resource: DialogueResource, title: String = "", extra_game_states: Array = []) -> Node:
+	var balloon: Node = load("res://themes/Showdown/joke_dialogue.tscn").instantiate()
+	get_current_scene.call().add_child(balloon)
+	balloon.start(resource, title, extra_game_states)
+	return balloon
+
 
 
 # Get the path to the example balloon

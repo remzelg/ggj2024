@@ -1,18 +1,17 @@
 [remap]
 
-importer="com.timothyqiu.godot-csv-importer"
-type="Resource"
+importer="csv_translation"
+type="Translation"
 uid="uid://cje7rcms62omv"
-path="res://.godot/imported/jokes.csv-33384870b882749aad93a07c1a9fcf45.res"
 
 [deps]
 
+files=["res://Resources/Jokes/jokes. headers.translation", "res://Resources/Jokes/jokes. line.translation"]
+
 source_file="res://Resources/Jokes/jokes.csv"
-dest_files=["res://.godot/imported/jokes.csv-33384870b882749aad93a07c1a9fcf45.res"]
+dest_files=["res://Resources/Jokes/jokes. headers.translation", "res://Resources/Jokes/jokes. line.translation"]
 
 [params]
 
+compress=true
 delimiter=0
-headers=false
-detect_numbers=false
-force_float=true

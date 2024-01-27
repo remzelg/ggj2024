@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cuehyr01lnpw1"]
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://cuehyr01lnpw1"]
 
 [ext_resource type="Texture2D" uid="uid://c3yx3jaec2tq6" path="res://assets/Art/92FFDE75-71EF-40D6-91EB-1D8E1E0E76BB.png" id="1_75knj"]
 [ext_resource type="Texture2D" uid="uid://c36ma1gqse3m8" path="res://assets/Art/A0FB2076-BFD2-4D3F-A3E0-712F46205DA3.png" id="1_arqbo"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c4kwpguqq4pq4" path="res://assets/Art/7222411D-13A1-42FF-9FCB-43223CB7942A.png" id="2_gk17n"]
 [ext_resource type="Texture2D" uid="uid://depes5k2nckqw" path="res://assets/Art/570636E5-15DB-4F9D-9561-268684B9CED6.png" id="2_ymg3l"]
 [ext_resource type="Texture2D" uid="uid://malw2y8y2wus" path="res://assets/Art/4FAEEEE3-1B29-49A1-9BE8-08AD764D1363.png" id="3_u74ad"]
+[ext_resource type="Texture2D" uid="uid://dtnuewuhmgs75" path="res://assets/Art/IMG_0160.PNG" id="7_embbu"]
 
 [resource]
 animations = [{
@@ -65,18 +66,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_arqbo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_gk17n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_gk17n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_arqbo")
-}, {
-"duration": 1.0,
 "texture": ExtResource("2_gk17n")
 }],
 "loop": true,
@@ -86,14 +75,23 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_gk17n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_arqbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gk17n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_arqbo")
 }],
 "loop": true,
 "name": &"lion_talking",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_u74ad")
+"texture": ExtResource("7_embbu")
 }],
 "loop": true,
 "name": &"possum_default",
@@ -102,6 +100,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_u74ad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_embbu")
 }],
 "loop": true,
 "name": &"possum_talking",

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3ovmlsn67rv5" path="res://main_game/player_card.tscn" id="4_1ulc1"]
 [ext_resource type="Script" path="res://main_game/Options.gd" id="5_0txgh"]
 [ext_resource type="PackedScene" uid="uid://tmeu7byt1vo6" path="res://main_game/option_button.tscn" id="5_b8djh"]
-[ext_resource type="PackedScene" path="res://main_game/confirm_popup.tscn" id="6_ajkyk"]
+[ext_resource type="PackedScene" uid="uid://lx1om5yr0ire" path="res://main_game/confirm_popup.tscn" id="6_ajkyk"]
 
 [node name="GameController" type="Control"]
 layout_mode = 3
