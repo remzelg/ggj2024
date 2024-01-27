@@ -17,30 +17,26 @@ script = ExtResource("1_171tw")
 
 [node name="Overworld" type="Node2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="Overworld"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.196078, 0.52549, 0.435294, 1)
-
 [node name="Locations" type="Node" parent="Overworld"]
 
 [node name="Bar" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(560, 312)
+animation = &"bar_default"
 animation_prefix = "bar"
 
 [node name="Apartment" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(901, 215)
+animation = &"apartment_default"
 animation_prefix = "apartment"
 
 [node name="Cafe" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(384, 520)
+animation = &"cafe_default"
 animation_prefix = "cafe"
 
 [node name="Library" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(948, 484)
+animation = &"library_default"
 animation_prefix = "library"
 
 [node name="Pawns" type="Node" parent="Overworld"]
@@ -119,3 +115,12 @@ text = "Library
 [node name="Cafe" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
 layout_mode = 2
 text = "Cafe"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.52549, 0.435294, 1)
