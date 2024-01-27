@@ -16,4 +16,8 @@ func _process(delta):
 
 func get_pos():
 	return to_global($Pivot.position)
+	
+func get_event():
+	var location_name = get_name()
+	
 

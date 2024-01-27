@@ -1,0 +1,15 @@
+~ Bar_lion_start
+
+Nathan: [[Hi|Hello|Howdy]], this is the bar.
+~
+Nathan: Here are some choices.
+- Drink beer
+	Nathan: You drink a beer. Have another?
+	=> Bar_lion_start
+- Work the bar crowd
+	Nathan: You picked the second one.
+- Pick a fight => Bar_lion_start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+
+=> END

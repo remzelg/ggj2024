@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LocationEvent" load_steps=2 format=3 uid="uid://6no05037r23n"]
+
+[ext_resource type="Script" path="res://Resources/location_event.gd" id="1_45yjt"]
+
+[resource]
+script = ExtResource("1_45yjt")
+name = "Hello Resources"
+id = 0
+values = Array[int]([0, 3, 12])
+enumValue = 0
