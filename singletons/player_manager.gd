@@ -1,5 +1,6 @@
 extends Node
 
+var playerCount = 0
 var players = {0: -1}
 var devices = {}
 
