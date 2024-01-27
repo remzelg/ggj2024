@@ -14,10 +14,19 @@ config/name="Jokes on You"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerManager="*res://player_manager.gd"
+MultiplayerInput="*res://addons/multiplayer_input/multiplayer_input.gd"
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/multiplayer_input/plugin.cfg")
 
 [rendering]
 

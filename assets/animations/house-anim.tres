@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://c7ijrvbho47k5"]
+
+[ext_resource type="Texture2D" uid="uid://cv2kgbbq25qgd" path="res://assets/kenney_tiny-battle/Tiles/tile_0009.png" id="1_3jjv1"]
+[ext_resource type="Texture2D" uid="uid://c6lx7roiebtew" path="res://assets/kenney_tiny-battle/Tiles/tile_0063.png" id="2_duojd"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3jjv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_3jjv1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_duojd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_duojd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_3jjv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_3jjv1")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 2.0
+}]
