@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0p7s057is5o"]
+
+[ext_resource type="Theme" uid="uid://bx0wlg6480pva" path="res://showdown/showdown_option_theme.tres" id="1_laiq5"]
+[ext_resource type="Texture2D" uid="uid://c1k1nhjfqse0w" path="res://assets/Art/41B987E5-FC84-4223-89B0-E4F40989A138.png" id="2_2vi4x"]
+
+[node name="JokeCategoryChoice" type="TextureButton"]
+offset_left = -13.0
+offset_top = 0.999985
+offset_right = 63.0
+offset_bottom = 37.0
+rotation = -0.190105
+theme = ExtResource("1_laiq5")
+texture_normal = ExtResource("2_2vi4x")
+ignore_texture_size = true
+stretch_mode = 5

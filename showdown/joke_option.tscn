@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4fon5fyxs6d3"]
+
+[ext_resource type="Script" path="res://showdown/joke_option.gd" id="1_edixg"]
+
+[node name="JokeOption" type="Button"]
+script = ExtResource("1_edixg")

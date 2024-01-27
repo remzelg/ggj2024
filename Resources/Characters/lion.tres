@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://b3vnqdrusdwf2"]
+
+[ext_resource type="Resource" uid="uid://lgoikrbfn7sv" path="res://Resources/Jokes/diss-possum.tres" id="1_rarbq"]
+[ext_resource type="Script" path="res://Resources/Character.gd" id="2_1vxxm"]
+[ext_resource type="Resource" uid="uid://cxei88bvaosmm" path="res://Resources/Characters/lion-stats.tres" id="3_m6pqi"]
+
+[resource]
+script = ExtResource("2_1vxxm")
+name = "Lion"
+jokes = [ExtResource("1_rarbq")]
+stats = ExtResource("3_m6pqi")

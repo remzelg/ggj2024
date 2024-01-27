@@ -24,6 +24,7 @@ signal mutated(mutation: Dictionary)
 ## Emitted when some dialogue has reached the end.
 signal dialogue_ended(resource: DialogueResource)
 
+signal joke_ended()
 ## Used internally.
 signal bridge_get_next_dialogue_line_completed(line: DialogueLine)
 
