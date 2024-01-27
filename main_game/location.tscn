@@ -5,11 +5,11 @@
 
 [node name="Location" type="AnimatedSprite2D"]
 texture_filter = 1
-position = Vector2(-1.90735e-06, -1.90735e-06)
+position = Vector2(1, -1)
 scale = Vector2(3.875, 3.875)
 sprite_frames = ExtResource("1_c0maw")
-animation = &"apartment_selected"
+animation = &"cafe_selected"
 script = ExtResource("1_lfu6m")
 
 [node name="Pivot" type="Marker2D" parent="."]
-position = Vector2(-2, 0)
+position = Vector2(-3.57628e-07, 7.22581)

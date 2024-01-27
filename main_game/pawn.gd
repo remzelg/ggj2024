@@ -11,11 +11,6 @@ func init(id):
 func _ready():
 	var device = PlayerManager.get_player_device(player_id)
 	input = DeviceInput.new(device)
-	#position = get_parent().get_parent().get_starting_position()
-
-func _process(delta):
-	var move = input.get_vector("move_left", "move_right", "move_up", "move_down")
-	position += move
 
 func get_pos():
 	return 

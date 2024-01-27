@@ -119,15 +119,3 @@ text = "Library
 [node name="Cafe" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
 layout_mode = 2
 text = "Cafe"
-
-[node name="OptionButton5" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
-layout_mode = 2
-
-[node name="OptionButton6" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
-layout_mode = 2
-
-[node name="OptionButton7" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
-layout_mode = 2
-
-[node name="OptionButton8" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
-layout_mode = 2
