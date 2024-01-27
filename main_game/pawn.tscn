@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://dlf4e2e3e3dqd"]
+[gd_scene load_steps=3 format=3 uid="uid://dlf4e2e3e3dqd"]
+
+[ext_resource type="Script" path="res://main_game/pawn.gd" id="1_mbgna"]
+[ext_resource type="Texture2D" uid="uid://6ivdanrjla1s" path="res://assets/kenney_tiny-battle/Tiles/tile_0142.png" id="2_ul4ho"]
 
 [node name="Pawn" type="Marker2D"]
+script = ExtResource("1_mbgna")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ul4ho")

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c0pb8ph8k06yk"]
+
+[node name="OptionButton" type="Button"]
+text = "Location"

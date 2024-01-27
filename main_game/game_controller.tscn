@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://62q535jvutkq"]
+[gd_scene load_steps=6 format=3 uid="uid://62q535jvutkq"]
 
 [ext_resource type="Script" path="res://main_game/game_controller.gd" id="1_171tw"]
 [ext_resource type="PackedScene" uid="uid://dlf4e2e3e3dqd" path="res://main_game/pawn.tscn" id="2_mxtet"]
 [ext_resource type="PackedScene" uid="uid://bec1hg1g3n68v" path="res://main_game/location.tscn" id="3_5osb3"]
 [ext_resource type="PackedScene" uid="uid://d3ovmlsn67rv5" path="res://main_game/player_card.tscn" id="4_1ulc1"]
+[ext_resource type="PackedScene" uid="uid://c0pb8ph8k06yk" path="res://main_game/option_button.tscn" id="5_b8djh"]
 
 [node name="GameController" type="Control"]
 layout_mode = 3
@@ -27,10 +28,25 @@ color = Color(0.196078, 0.52549, 0.435294, 1)
 [node name="Pawns" type="Node" parent="Overworld"]
 
 [node name="Pawn" parent="Overworld/Pawns" instance=ExtResource("2_mxtet")]
+position = Vector2(403, 173)
 
 [node name="Locations" type="Node" parent="Overworld"]
 
-[node name="Location" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
+[node name="Bar" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
+position = Vector2(560, 312)
+animation_prefix = "bar"
+
+[node name="Apartment" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
+position = Vector2(901, 215)
+animation_prefix = "Apartment"
+
+[node name="Cafe" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
+position = Vector2(384, 520)
+animation_prefix = "cafe"
+
+[node name="Library" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
+position = Vector2(948, 484)
+animation_prefix = "library"
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -66,3 +82,52 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="Options" type="Panel" parent="UI"]
+custom_minimum_size = Vector2(200, 400)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="Vbox" type="VBoxContainer" parent="UI/Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Bar" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2
+text = "Bar"
+
+[node name="Apartment" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2
+text = "Apartment"
+
+[node name="Library" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2
+text = "Library
+"
+
+[node name="Cafe" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2
+text = "Cafe"
+
+[node name="OptionButton5" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2
+
+[node name="OptionButton6" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2
+
+[node name="OptionButton7" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2
+
+[node name="OptionButton8" parent="UI/Options/Vbox" instance=ExtResource("5_b8djh")]
+layout_mode = 2

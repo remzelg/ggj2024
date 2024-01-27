@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://bec1hg1g3n68v"]
+[gd_scene load_steps=3 format=3 uid="uid://bec1hg1g3n68v"]
 
-[node name="Location" type="Marker2D"]
+[ext_resource type="SpriteFrames" uid="uid://iigig1cf6il6" path="res://assets/animations/location_frames.tres" id="1_c0maw"]
+[ext_resource type="Script" path="res://main_game/location.gd" id="1_lfu6m"]
+
+[node name="Location" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_c0maw")
+animation = &"apartment_selected"
+script = ExtResource("1_lfu6m")
+
+[node name="Pivot" type="Marker2D" parent="."]
+position = Vector2(-2, 0)
