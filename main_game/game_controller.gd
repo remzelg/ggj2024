@@ -6,8 +6,18 @@ var current_pawn_name = "Lion"
 var current_player = 0
 var last_location
 @onready var curr_pawn = $Overworld/Pawns/Pawn
+
+var currentTurn:int = -1
+var playerPtr:int = -1
+var totalTurns:int = -1
+signal game_end
+signal turn_end
+
 @onready var _library = $Overworld/Locations/Library
 @onready var _apartment = $Overworld/Locations/Apartment
+@onready var _bar = $Overworld/Locations/Bar
+
+var turns_init = false
 
 @onready var get_ui_node: Callable = func():
 	return $UI
@@ -24,7 +34,34 @@ func _ready():
 		button.focus_entered.connect(_on_location_hovered.bind(button.name))
 		button.pressed.connect(_on_location_selected.bind(button.name))
 	$UI/Options/Vbox/Apartment.grab_focus()
+	tick()
 	
+func init_player(playerId:int) -> void:
+	var current_pawn_name = "Lion"
+	var current_player = 0
+	curr_pawn.init(playerId)
+
+func tick() -> void:
+	if !turns_init:
+		# TODO read from settings or something
+		totalTurns = 2
+		currentTurn = 1
+		playerPtr = -1
+		turns_init = true
+
+	playerPtr += 1
+	if playerPtr == PlayerManager.playerCount:
+		turn_end.emit()
+		currentTurn += 1
+		playerPtr = 0
+
+	if currentTurn > totalTurns:
+		game_end.emit()
+		return
+
+	var nextPlayer = PlayerManager.get_player_ids()[playerPtr]
+	init_player(nextPlayer)
+	print("tick\n\tturns " + str(currentTurn) + "/" + str(totalTurns) + "\n\tptrs " + str(playerPtr) + " for " + str(PlayerManager.get_player_ids()) + "\n\t\t" + str(PlayerManager.playerCount))
 	
 func _process(delta):
 	pass
@@ -42,9 +79,11 @@ func _on_location_selected(location_name):
 	$UI/ConfirmPopup.grab_focus()
 	
 
+# this is when a player's turn ends
 func _on_dialogue_exited(_resource):
 	var button = _button_node_from_name(last_location)
 	button.grab_focus()
+	tick()
 
 func _location_pos_from_name(location):
 	return get_node("Overworld/Locations/" + location).get_pos()
@@ -59,4 +98,9 @@ func _on_confirmation_yes():
 
 func _on_confirmation_no():
 	_button_node_from_name(last_location).grab_focus()
-	pass
+
+func _on_overworld_turn_game_end():
+	get_tree().quit()
+
+func _on_game_end():
+	get_tree().quit()

@@ -12,7 +12,7 @@ func _on_settings_back_button_pressed():
 	$SplashMenu.visible = true # Replace with function body.
 
 func _on_quit_button_pressed():
-	get_tree().quit() # Replace with function body.
+	get_tree().quit()
 
 func _on_start_button_pressed():
 	$AnimationPlayer.play("fade out")

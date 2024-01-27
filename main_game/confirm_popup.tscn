@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://lx1om5yr0ire"]
+[gd_scene load_steps=2 format=3 uid="uid://dwbi7r0i4y6qr"]
 
 [ext_resource type="Script" path="res://main_game/confirm_popup.gd" id="1_lfh3m"]
 
@@ -8,6 +8,7 @@ offset_bottom = 100.0
 script = ExtResource("1_lfh3m")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 109.0
@@ -23,10 +24,22 @@ alignment = 1
 
 [node name="Yes" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../No")
+focus_neighbor_top = NodePath("../No")
+focus_neighbor_right = NodePath("../No")
+focus_neighbor_bottom = NodePath("../No")
+focus_next = NodePath("../No")
+focus_previous = NodePath("../No")
 text = "Yes"
 
 [node name="No" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+focus_neighbor_left = NodePath("../Yes")
+focus_neighbor_top = NodePath("../Yes")
+focus_neighbor_right = NodePath("../Yes")
+focus_neighbor_bottom = NodePath("../Yes")
+focus_next = NodePath("../Yes")
+focus_previous = NodePath("../Yes")
 text = "No"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/Yes" to="." method="_on_yes"]
