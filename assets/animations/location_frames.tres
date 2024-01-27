@@ -1,19 +1,14 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://iigig1cf6il6"]
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://iigig1cf6il6"]
 
 [ext_resource type="Texture2D" uid="uid://drf3jw2l6yfbj" path="res://assets/kenney_tiny-battle/Tiles/tile_0008.png" id="1_gno25"]
 [ext_resource type="Texture2D" uid="uid://di4lsch858olv" path="res://assets/kenney_tiny-battle/Tiles/tile_0080.png" id="2_ten46"]
-[ext_resource type="Texture2D" uid="uid://wij8ndqnmutg" path="res://assets/kenney_tiny-battle/Tiles/tile_0013.png" id="3_lvum8"]
 [ext_resource type="Texture2D" uid="uid://bls2xm80mmocw" path="res://assets/Art/C4ED83DC-82A6-4C2E-9A12-DB69249A943C.png" id="3_wvtqg"]
-[ext_resource type="Texture2D" uid="uid://xt8o0a4qxwek" path="res://assets/kenney_tiny-battle/Tiles/tile_0031.png" id="4_jvyue"]
-[ext_resource type="Texture2D" uid="uid://bcxqsodjie82c" path="res://assets/kenney_tiny-battle/Tiles/tile_0011.png" id="5_irnrm"]
-[ext_resource type="Texture2D" uid="uid://dta3tkmqi4ag0" path="res://assets/kenney_tiny-battle/Tiles/tile_0065.png" id="6_l6m8b"]
+[ext_resource type="Texture2D" uid="uid://ck2lgjbg1fppp" path="res://assets/Art/5780D3FA-50FE-44B2-A68B-086BB93C292C.png" id="4_87bym"]
+[ext_resource type="Texture2D" uid="uid://hywmkgk1s7pt" path="res://assets/Art/E5DD69A0-0464-4D94-95BF-E51BA363F16B.png" id="5_f18a1"]
 
 [resource]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_gno25")
-}],
+"frames": [],
 "loop": true,
 "name": &"apartment_default",
 "speed": 5.0
@@ -56,7 +51,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_lvum8")
+"texture": ExtResource("4_87bym")
 }],
 "loop": true,
 "name": &"cafe_default",
@@ -64,16 +59,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_lvum8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_lvum8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_jvyue")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_jvyue")
+"texture": ExtResource("4_87bym")
 }],
 "loop": true,
 "name": &"cafe_selected",
@@ -81,7 +67,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_irnrm")
+"texture": ExtResource("5_f18a1")
 }],
 "loop": true,
 "name": &"library_default",
@@ -89,16 +75,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_irnrm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_irnrm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_l6m8b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_l6m8b")
+"texture": ExtResource("5_f18a1")
 }],
 "loop": true,
 "name": &"library_selected",

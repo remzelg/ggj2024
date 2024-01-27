@@ -32,22 +32,22 @@ z_index = -1
 [node name="Locations" type="Node" parent="Overworld"]
 
 [node name="Bar" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
-position = Vector2(348, 211)
+position = Vector2(525, 141)
 animation = &"bar_default"
 animation_prefix = "bar"
 
 [node name="Apartment" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
-position = Vector2(901, 215)
+position = Vector2(972, 178)
 animation = &"apartment_default"
 animation_prefix = "apartment"
 
 [node name="Cafe" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
-position = Vector2(384, 520)
+position = Vector2(371, 575)
 animation = &"cafe_default"
 animation_prefix = "cafe"
 
 [node name="Library" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
-position = Vector2(948, 484)
+position = Vector2(860, 457)
 animation = &"library_default"
 animation_prefix = "library"
 

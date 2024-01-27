@@ -7,7 +7,7 @@
 texture_filter = 1
 scale = Vector2(0.70531, 0.70531)
 sprite_frames = ExtResource("1_c0maw")
-animation = &"bar_selected"
+animation = &"library_selected"
 script = ExtResource("1_lfu6m")
 
 [node name="Pivot" type="Marker2D" parent="."]

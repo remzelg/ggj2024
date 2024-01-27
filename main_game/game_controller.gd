@@ -53,9 +53,9 @@ func _button_node_from_name(location):
 	return get_node("UI/Options/Vbox/" + location)
 
 func _on_confirmation_yes():
+	
 	DialogueManager.show_dialogue_balloon(example, "start")
 
 func _on_confirmation_no():
 	_button_node_from_name(last_location).grab_focus()
 	pass
-
