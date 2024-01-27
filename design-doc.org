@@ -50,19 +50,50 @@ The Game Controller is a ControlNode inherited class node, which is a holder for
 **** Scripts
 ***** GameController.gd
 This will likely be a very large file.
-It should initialize 
+It should:
+- Initialize the pawns
+- Handle turn resolution
+- Interact with both the Theater and the Showdown scenes
+- handle updates to the player resources (adding jokes and causing stat effects)
 
-*** Overworld.tscn
 *** Theater.tscn
+The theater scene is a pop up panel with a area for splash art and actor sprites and then an interactable dialogue box.
+it spawns when a player confirms their location selection
+**** Nodes
+ 
 *** Location.tscn
-*** PlayerController.tscn
 *** Showdown.tscn
+The third and final "main" scene. it is stage with the player actor sprites on it in front of an audience, and with ui elements that convey the game state for the showdown.
+**** Nodes
+***** Background
+***** UI
+****** PopularityMeter
+****** ActionSelectPanel
+******* OptionButton
+****** TurnOrderIndicator
+****** PlayerCards
+***** Audience (animation sprites)
+***** PlayerActors
+
 *** Pawn.tscn
+the pawn that moves around the overworld
 *** ToolTip.tscn
+a multipurpose tool tip that should load info and go visible on hover
+** Singletons
+*** PlayerManager.gd
+manages which players use which devices, and also correlate player id to a player tres object file
+*** GameSettings.gd
 ** Resources
 *** Player.tres
+resource that holds a given player's stats, jokes, and character name
 *** TheaterEvent.tres
+Resource that either runs every time a location is chosen, or has a conditional chance of occuring
+also can hold information such as a stat requirement for dialogue tree options
 *** DescisionEffect.tres
+Resource that is loaded so the GameController knows how to affect a player's stats or joke repetoire
 *** TheaterActorMap.tres
+Resource that correlates sprites to keywords and character names in order to easily recall them during dialogue or showdown rendering
 *** Showdown/Joke.tres
+Resource that has the text of a joke to be read out during the showdown, and any references to other tres files that are relevant.
 *** Showdown/BoardState.tres
+Resource that can add temporary modifications to the player resources witohut permanently changing them

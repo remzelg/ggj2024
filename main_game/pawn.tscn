@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dlf4e2e3e3dqd"]
 
 [ext_resource type="Script" path="res://main_game/pawn.gd" id="1_mbgna"]
-[ext_resource type="Texture2D" uid="uid://6ivdanrjla1s" path="res://assets/kenney_tiny-battle/Tiles/tile_0142.png" id="2_ul4ho"]
+[ext_resource type="Texture2D" uid="uid://m8jl0bq5j0qs" path="res://assets/Art/7AA50B42-9F93-4491-A4CC-A65958FCE7AF.png" id="2_ula1c"]
 
 [node name="Pawn" type="Marker2D"]
 script = ExtResource("1_mbgna")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2.125, 2.125)
-texture = ExtResource("2_ul4ho")
+position = Vector2(-2, -7.62939e-06)
+scale = Vector2(0.923106, 0.923106)
+texture = ExtResource("2_ula1c")

@@ -26,7 +26,7 @@ func _on_start_button_pressed():
 	$AnimationPlayer.play("fade out")
 	$Fader.set_visible(true)
 	PlayerManager.playerCount = $PlayerCountMenu/OptionButton.selected
-	
+
 func _on_audio_slider_value_changed(value):
 	GameSettings.audioLevel = value
 

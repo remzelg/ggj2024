@@ -1,16 +1,8 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cnc77kvgm0cdv"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cnc77kvgm0cdv"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wuxa"]
-bg_color = Color(0.262745, 0.317647, 0.6, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.121569, 0.137255, 0.211765, 1)
-corner_radius_top_left = 32
-corner_radius_top_right = 32
-corner_radius_bottom_right = 32
-corner_radius_bottom_left = 32
+[ext_resource type="StyleBox" uid="uid://cqcloyxbi2c64" path="res://themes/theater/bubble-panel.tres" id="1_f2vur"]
+[ext_resource type="StyleBox" uid="uid://ct4q13m5b4hf0" path="res://themes/theater/inner-panel.tres" id="2_gduqy"]
 
 [resource]
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_4wuxa")
+Panel/styles/panel = ExtResource("1_f2vur")
+PanelContainer/styles/panel = ExtResource("2_gduqy")

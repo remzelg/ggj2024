@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpkbq537gn8j7"]
+[gd_scene load_steps=6 format=3 uid="uid://cpkbq537gn8j7"]
 
+[ext_resource type="Script" path="res://main_game/theater.gd" id="1_78tk8"]
 [ext_resource type="Theme" uid="uid://cnc77kvgm0cdv" path="res://themes/theater/theater.tres" id="1_ek45g"]
+[ext_resource type="StyleBox" uid="uid://cqcloyxbi2c64" path="res://themes/theater/bubble-panel.tres" id="3_hts6i"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_oxbjy"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="4_osnrf"]
 
 [node name="Theater" type="Control"]
 layout_mode = 3
@@ -9,6 +13,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_78tk8")
+metadata/_edit_use_anchors_ = true
 
 [node name="Margins" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -25,3 +31,91 @@ theme_override_constants/margin_bottom = 100
 [node name="Panel" type="PanelContainer" parent="Margins"]
 layout_mode = 2
 theme = ExtResource("1_ek45g")
+
+[node name="Margins" type="MarginContainer" parent="Margins/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="BubbleContainer" type="Control" parent="Margins/Panel/Margins"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Balloon" type="Panel" parent="Margins/Panel/Margins/BubbleContainer"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("1_ek45g")
+theme_override_styles/panel = ExtResource("3_hts6i")
+
+[node name="Dialogue" type="MarginContainer" parent="Margins/Panel/Margins/BubbleContainer/Balloon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margins/Panel/Margins/BubbleContainer/Balloon/Dialogue"]
+layout_mode = 2
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Margins/Panel/Margins/BubbleContainer/Balloon/Dialogue/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+
+[node name="DialogueLabel" parent="Margins/Panel/Margins/BubbleContainer/Balloon/Dialogue/VBoxContainer" instance=ExtResource("3_oxbjy")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Dialogue..."
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+
+[node name="Responses" type="MarginContainer" parent="Margins/Panel/Margins/BubbleContainer/Balloon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.226
+anchor_top = 0.166
+anchor_right = 0.961
+anchor_bottom = 0.168
+offset_left = -3.31201
+offset_top = -404.224
+offset_right = -0.63208
+offset_bottom = -0.552
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Margins/Panel/Margins/BubbleContainer/Balloon/Responses"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 2
+script = ExtResource("4_osnrf")
+
+[node name="ResponseExample" type="Button" parent="Margins/Panel/Margins/BubbleContainer/Balloon/Responses/ResponsesMenu"]
+layout_mode = 2
+text = "Response example"
+
+[node name="TextureRect" type="TextureRect" parent="Margins/Panel/Margins"]
+layout_mode = 2
+
+[connection signal="gui_input" from="Margins/Panel/Margins/BubbleContainer/Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Margins/Panel/Margins/BubbleContainer/Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
