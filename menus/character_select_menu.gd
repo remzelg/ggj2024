@@ -1,42 +1,69 @@
 extends Control
 
-var active_player = 0
-var selected_character = -1
-var players = [0, 0, 0] # delete once singleton is all setup
+var character_selections = {}
 
-func _on_texture_button1_pressed():
-	selected_character = 1
+func _process(delta):
+	if Input.is_action_just_pressed("move_left"):
+		toggle_character(1)
+	if Input.is_action_just_pressed("move_up"):
+		toggle_character(2)
+	if Input.is_action_just_pressed("move_down"):
+		toggle_character(3)
+	if Input.is_action_just_pressed("move_right"):
+		toggle_character(4)
 
-	lock_start_button()
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("ui_accept") and character_selections.size() > 1:
+		begin_game()
 
-func _on_texture_button2_pressed():
-	selected_character = 2
+func _on_character_select_1_pressed():
+	toggle_character(1)
 
-	lock_start_button()
 
-func _on_start_pressed():
-	if all_players_selected():
-		get_tree().change_scene_to_file('res://menus/main_menu.tscn')
+func _on_character_select_2_pressed():
+	toggle_character(2)
+
+
+func _on_character_select_3_pressed():
+	toggle_character(3)
+
+
+func _on_character_select_4_pressed():
+	toggle_character(4)
+
+
+func toggle_character(character):
+	if character_selections.has(character):
+		character_selections.erase(character)
 	else:
-		if selected_character <= 0:
-			return
+		character_selections[character] = true
 
-		select_character(active_player, selected_character)
+	draw_character_selections()
 
-		if all_players_selected():
-			$VBoxContainer2/StartButton.text = 'start'
+func draw_character_selections():
+	for i in range(1, 5):
+		if character_selections.has(i):
+			toggle_selected(i, true)
+		else:
+			toggle_selected(i, false)
 
-func lock_start_button():
-	var start_button = $VBoxContainer2/StartButton
+func toggle_selected(character, visible):
+	if character == 1:
+		$HBoxContainer2/Row2/CharacterSelector1/CharacterSelect1/Selected.visible = visible
+	elif character == 2:
+		$HBoxContainer2/Row3/CharacterSelector2/CharacterSelect2/Selected.visible = visible
+	elif character == 3:
+		$HBoxContainer2/Row3/CharacterSelector3/CharacterSelect3/Selected.visible = visible
+	elif character == 4:
+		$HBoxContainer2/Row4/CharacterSelector4/CharacterSelect4/Selected.visible = visible
 
-	start_button.text = 'Accept'
+func begin_game():
+	var players = {}
+	var i = 0
 
-func select_character(player, character):
-	var start_button = $VBoxContainer2/StartButton
+	for key in character_selections:
+		players[i] = key
+		i += 1
 
-	players[active_player] = selected_character
-	start_button.text = 'Select Your Character'
-	active_player += 1
-
-func all_players_selected():
-	players.all(func(number): return number > 0)
+	PlayerManager.players = players
+	get_tree().change_scene_to_file("res://main_game/game_controller.tscn")
