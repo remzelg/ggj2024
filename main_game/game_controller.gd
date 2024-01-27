@@ -1,7 +1,5 @@
 extends Control
 
-# correlates a player number to a device number
-var player_pawn_mapping = {}
 var current_pawn_name = "Lion"
 var current_player = 0
 var last_location
@@ -28,7 +26,6 @@ func _ready():
 	DialogueManager.get_current_scene = get_ui_node
 	DialogueManager.dialogue_ended.connect(_on_dialogue_exited)
 
-	player_pawn_mapping[0] = 0
 	curr_pawn.position = _apartment.get_pos()
 	for button in $UI/Options/Vbox.get_children():
 		button.focus_entered.connect(_on_location_hovered.bind(button.name))
@@ -37,8 +34,17 @@ func _ready():
 	tick()
 	
 func init_player(playerId:int) -> void:
-	var current_pawn_name = "Lion"
-	var current_player = 0
+	current_player = playerId
+	
+	var player_device = PlayerManager.get_player_device(playerId)
+	if player_device == 1:
+		current_pawn_name = "Possum"
+	elif player_device == 2:
+		current_pawn_name = "Bird"
+	elif player_device == 3:
+		current_pawn_name = "Lion"
+	else:
+		current_pawn_name = "Dolphin"
 	curr_pawn.init(playerId)
 
 func tick() -> void:
@@ -99,8 +105,5 @@ func _on_confirmation_yes():
 func _on_confirmation_no():
 	_button_node_from_name(last_location).grab_focus()
 
-func _on_overworld_turn_game_end():
-	get_tree().quit()
-
 func _on_game_end():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://showdown/showdown.tscn")
