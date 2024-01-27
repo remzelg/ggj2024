@@ -1,0 +1,109 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cuehyr01lnpw1"]
+
+[ext_resource type="Texture2D" uid="uid://c3yx3jaec2tq6" path="res://assets/Art/92FFDE75-71EF-40D6-91EB-1D8E1E0E76BB.png" id="1_75knj"]
+[ext_resource type="Texture2D" uid="uid://c36ma1gqse3m8" path="res://assets/Art/A0FB2076-BFD2-4D3F-A3E0-712F46205DA3.png" id="1_arqbo"]
+[ext_resource type="Texture2D" uid="uid://okikl2wt6ykl" path="res://assets/Art/24F8141A-2B5A-40CB-864C-FFB0CEE780E8.png" id="1_cqt2e"]
+[ext_resource type="Texture2D" uid="uid://k6l1bfjwcgx" path="res://assets/Art/C3CC7C80-1BC1-439F-8776-4FBDF60C076B.png" id="2_as5p3"]
+[ext_resource type="Texture2D" uid="uid://c4kwpguqq4pq4" path="res://assets/Art/7222411D-13A1-42FF-9FCB-43223CB7942A.png" id="2_gk17n"]
+[ext_resource type="Texture2D" uid="uid://depes5k2nckqw" path="res://assets/Art/570636E5-15DB-4F9D-9561-268684B9CED6.png" id="2_ymg3l"]
+[ext_resource type="Texture2D" uid="uid://malw2y8y2wus" path="res://assets/Art/4FAEEEE3-1B29-49A1-9BE8-08AD764D1363.png" id="3_u74ad"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_75knj")
+}],
+"loop": true,
+"name": &"bird_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_75knj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ymg3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_75knj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ymg3l")
+}],
+"loop": true,
+"name": &"bird_talking",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cqt2e")
+}],
+"loop": true,
+"name": &"dolphin_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_as5p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_cqt2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_cqt2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_as5p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_cqt2e")
+}],
+"loop": true,
+"name": &"dolphin_talking",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_arqbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gk17n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gk17n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_arqbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gk17n")
+}],
+"loop": true,
+"name": &"lion_default",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gk17n")
+}],
+"loop": true,
+"name": &"lion_talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u74ad")
+}],
+"loop": true,
+"name": &"possum_default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u74ad")
+}],
+"loop": true,
+"name": &"possum_talking",
+"speed": 5.0
+}]

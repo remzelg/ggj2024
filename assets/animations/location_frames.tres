@@ -1,30 +1,23 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://iigig1cf6il6"]
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://iigig1cf6il6"]
 
-[ext_resource type="Texture2D" uid="uid://drf3jw2l6yfbj" path="res://assets/kenney_tiny-battle/Tiles/tile_0008.png" id="1_gno25"]
-[ext_resource type="Texture2D" uid="uid://di4lsch858olv" path="res://assets/kenney_tiny-battle/Tiles/tile_0080.png" id="2_ten46"]
+[ext_resource type="Texture2D" uid="uid://c3uhppp77jy42" path="res://assets/Art/FC5E05B2-8145-47B5-81CD-32ADF36EE839.png" id="1_7o0if"]
 [ext_resource type="Texture2D" uid="uid://bls2xm80mmocw" path="res://assets/Art/C4ED83DC-82A6-4C2E-9A12-DB69249A943C.png" id="3_wvtqg"]
 [ext_resource type="Texture2D" uid="uid://ck2lgjbg1fppp" path="res://assets/Art/5780D3FA-50FE-44B2-A68B-086BB93C292C.png" id="4_87bym"]
 [ext_resource type="Texture2D" uid="uid://hywmkgk1s7pt" path="res://assets/Art/E5DD69A0-0464-4D94-95BF-E51BA363F16B.png" id="5_f18a1"]
 
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7o0if")
+}],
 "loop": true,
 "name": &"apartment_default",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ten46")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_ten46")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_gno25")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_gno25")
+"texture": ExtResource("1_7o0if")
 }],
 "loop": true,
 "name": &"apartment_selected",

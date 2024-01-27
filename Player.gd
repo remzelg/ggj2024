@@ -1,4 +1,4 @@
-extends Resource
+class_name player extends Resource
 
 @export var character : Resource
 @export var device_number : int

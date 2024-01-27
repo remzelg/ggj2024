@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://2vtn8mjr0n1n"]
+
+[node name="Popularity" type="ProgressBar"]
+size_flags_horizontal = 3
+size_flags_vertical = 1

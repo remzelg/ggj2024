@@ -48,7 +48,7 @@ animation_prefix = "cafe"
 
 [node name="Library" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(860, 457)
-animation = &"library_default"
+animation = &"apartment_selected"
 animation_prefix = "library"
 
 [node name="Pawns" type="Node" parent="Overworld"]

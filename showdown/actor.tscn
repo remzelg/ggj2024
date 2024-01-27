@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr011ueubbvej"]
+
+[ext_resource type="SpriteFrames" uid="uid://cuehyr01lnpw1" path="res://assets/animations/showdown_actor_frames.tres" id="1_7y3ow"]
+[ext_resource type="Script" path="res://showdown/actor.gd" id="2_i81th"]
+
+[node name="Actor" type="AnimatedSprite2D"]
+position = Vector2(576, 284)
+sprite_frames = ExtResource("1_7y3ow")
+animation = &"lion_default"
+script = ExtResource("2_i81th")

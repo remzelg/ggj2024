@@ -13,7 +13,7 @@ var last_location
 @onready var get_ui_node: Callable = func():
 	return $UI
 
-var tween
+@onready var tween
 
 func _ready():
 	DialogueManager.get_current_scene = get_ui_node
