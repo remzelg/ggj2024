@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ds5n7g42i1ht6" path="res://assets/lion.jpg" id="3_fdsoa"]
 [ext_resource type="Script" path="res://menus/character_selector.gd" id="4_8yt22"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xedc0"]
+
 [node name="CharacterSelectMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -86,7 +88,7 @@ scale = Vector2(2, 2)
 pivot_offset = Vector2(110, 80)
 texture_normal = ExtResource("3_fdsoa")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -97,12 +99,21 @@ grow_vertical = 2
 pivot_offset = Vector2(640, 87)
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer2"]
 modulate = Color(0.0980392, 0.0980392, 0.0980392, 1)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 0
 text = "Select your character!"
 horizontal_alignment = 1
 
+[node name="StartButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/icon_focus_color = Color(0, 0.8, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxTexture_xedc0")
+text = "Select Character"
+
 [connection signal="pressed" from="HBoxContainer/Row1/CharacterSelector1/TextureButton" to="." method="_on_texture_button1_pressed"]
 [connection signal="pressed" from="HBoxContainer/Row2/CharacterSelector1/TextureButton" to="." method="_on_texture_button2_pressed"]
+[connection signal="pressed" from="VBoxContainer2/StartButton" to="." method="_on_start_pressed"]

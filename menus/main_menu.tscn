@@ -59,7 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SplashMenu" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(600, 0)
+custom_minimum_size = Vector2(1000, 400)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -77,15 +77,18 @@ grow_vertical = 2
 layout_mode = 2
 text = "main menu"
 
-[node name="StartButton" type="Button" parent="SplashMenu"]
+[node name="SplashStartButton" type="Button" parent="SplashMenu"]
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "start"
 
 [node name="SettingsButton" type="Button" parent="SplashMenu"]
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "settings"
 
 [node name="QuitButton" type="Button" parent="SplashMenu"]
+custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "QUIT"
 
@@ -132,7 +135,47 @@ offset_right = 587.0
 offset_bottom = 26.0
 value = 60.0
 
-[node name="BackButton" type="Button" parent="SettingsMenu"]
+[node name="SettingsBackButton" type="Button" parent="SettingsMenu"]
+layout_mode = 2
+text = "back"
+
+[node name="PlayerCountMenu" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -62.5
+offset_right = 20.0
+offset_bottom = 62.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerCountLabel" type="Label" parent="PlayerCountMenu"]
+layout_mode = 2
+text = "player count"
+
+[node name="OptionButton" type="OptionButton" parent="PlayerCountMenu"]
+layout_mode = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "2"
+popup/item_0/id = 2
+popup/item_1/text = "3"
+popup/item_1/id = 3
+popup/item_2/text = "4"
+popup/item_2/id = 4
+
+[node name="StartButton" type="Button" parent="PlayerCountMenu"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+text = "start"
+
+[node name="PlayerCountBackButton" type="Button" parent="PlayerCountMenu"]
 layout_mode = 2
 text = "back"
 
@@ -152,7 +195,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.666667, 0.666667, 0.666667, 0.333333)
 
-[connection signal="pressed" from="SplashMenu/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="SplashMenu/SplashStartButton" to="." method="_on_splash_start_button_pressed"]
 [connection signal="pressed" from="SplashMenu/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="SplashMenu/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="SettingsMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="SettingsMenu/SettingsBackButton" to="." method="_on_settings_back_button_pressed"]
+[connection signal="pressed" from="PlayerCountMenu/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="PlayerCountMenu/PlayerCountBackButton" to="." method="_on_player_count_back_button_pressed"]
