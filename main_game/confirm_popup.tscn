@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://lx1om5yr0ire"]
+
+[node name="ConfirmPopup" type="PopupPanel"]
+size = Vector2i(113, 100)
+visible = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 109.0
+offset_bottom = 96.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Are you sure?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Yes" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "No"
