@@ -1,15 +1,17 @@
-~ Bar_lion_start
-
-Nathan: [[Hi|Hello|Howdy]], this is the bar.
-~
+~ Bar
+Nathan: [[Hi|Hello|Howdy]], welcome to the Trough!
 Nathan: Here are some choices.
+~ BAR_CHOICE
 - Drink beer
 	Nathan: You drink a beer. Have another?
-	=> Bar_lion_start
+	=> BAR_CHOICE
 - Work the bar crowd
-	Nathan: You picked the second one.
-- Pick a fight => Bar_lion_start
+	Nathan: Please don't.
+	=> BAR_CHOICE
 - End the conversation => END
-Nathan: For more information see the online documentation.
+=> END
 
+~ Bar__character_Lion
+Nathan: Rawr! Welcome to the Trough.
+=> BAR_CHOICE
 => END

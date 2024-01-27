@@ -2,7 +2,7 @@ extends Control
 
 # correlates a player number to a device number
 var player_pawn_mapping = {}
-var current_pawn_name = "lion"
+var current_pawn_name = "Lion"
 var current_player = 0
 var last_location
 @onready var curr_pawn = $Overworld/Pawns/Pawn
@@ -41,6 +41,7 @@ func _on_location_hovered(location):
 func _on_location_selected(location_name):
 	last_location = location_name
 	$UI/ConfirmPopup.visible = true
+	$UI/ConfirmPopup.grab_focus()
 	
 
 func _on_dialogue_exited(_resource):
@@ -53,16 +54,10 @@ func _location_pos_from_name(location):
 func _button_node_from_name(location):
 	return get_node("UI/Options/Vbox/" + location)
 	
-func _location_resource_file_from_name(location):
-	return "res://Resources/Dialogues/" + location + ".dialogue"
-	
-func _dialogue_title(location, character):
-	return location + "_" + character + "_start"
-
 func _on_confirmation_yes():
-	var dialogueTarget = load(_location_resource_file_from_name(last_location))
-	var dialogueTitle = _dialogue_title(last_location, current_pawn_name)
-	DialogueManager.show_dialogue_balloon(dialogueTarget, dialogueTitle)
+	var locationEvent:LocationEvent = load("res://Resources/LocationEvents/" + last_location + ".tres")
+	locationEvent = locationEvent.for_tags(["character:" + current_pawn_name])
+	DialogueManager.show_dialogue_balloon(locationEvent.dialogue_target(), locationEvent.dialogue_title())
 
 func _on_confirmation_no():
 	_button_node_from_name(last_location).grab_focus()

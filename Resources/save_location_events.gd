@@ -5,23 +5,31 @@ extends EditorScript
 # https://gamedev.stackexchange.com/questions/192488/is-there-a-way-to-run-a-tool-script-without-attaching-it-to-a-node-in-the-scene
 # https://simondalvai.org/blog/godot-custom-resources/
 
+const Bar = "Bar"
+const LionTag = "character:Lion"
+
 # Called when the script is executed (using File -> Run in Script Editor).
 func _run():
-	var my_resource:LocationEvent = LocationEvent.new()
-	# assign values
-	my_resource.name = "Hello Resources"
-	my_resource.values = [0, 3, 12]
-
-	# save it
-	ResourceSaver.save(my_resource, "res://Resources/LocationEvents/my_resource.tres")
+	var bar_root = _build_bar()
+	# only save the roots, since it will serialize other nodes via Events
+	ResourceSaver.save(bar_root, "res://Resources/LocationEvents/Bar.tres")
 
 	# load it
-	var my_resource_from_disk:LocationEvent = load("res://Resources/LocationEvents/my_resource.tres")
+	var bar_from_disk:LocationEvent = load("res://Resources/LocationEvents/Bar.tres")
+	print(bar_from_disk.tags)
+	var n = bar_from_disk.for_tags([])
+	print(n.tags)
 
-	# prints "Hello Resources"
-	print(my_resource_from_disk.name)
+func _build_bar():
+	var bar_lion = _build_event(Bar, [], [LionTag])
+	var bar_root = _build_event(Bar, [bar_lion], [])
+	return bar_root
 
-
-	# prints "15"
-	print(my_resource_from_disk.sum())
-
+func _build_event(location_name:String, events:Array[LocationEvent], tags:Array[String]):
+	var candidate:LocationEvent = LocationEvent.new()
+	candidate.location_name = location_name
+	candidate.events = events
+	candidate.tags = tags
+	# sanity check that relevant dialogue exists
+	print("needs file: Resources/LocationsEvents/" + location_name + ".tres\n\tneeds: " + candidate.dialogue_title())
+	return candidate

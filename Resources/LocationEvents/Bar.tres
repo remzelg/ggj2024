@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LocationEvent" load_steps=3 format=3 uid="uid://cdnrnkleqfp5u"]
+
+[ext_resource type="Script" path="res://Resources/location_event.gd" id="1_ja14w"]
+
+[sub_resource type="Resource" id="Resource_3f7t5"]
+script = ExtResource("1_ja14w")
+location_name = "Bar"
+events = Array[ExtResource("1_ja14w")]([])
+tags = Array[String](["character:Lion"])
+
+[resource]
+script = ExtResource("1_ja14w")
+location_name = "Bar"
+events = Array[ExtResource("1_ja14w")]([SubResource("Resource_3f7t5")])
+tags = Array[String]([])
