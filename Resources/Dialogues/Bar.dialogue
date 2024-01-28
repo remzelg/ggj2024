@@ -1,4 +1,4 @@
-~ Bar__character_Bird__character_Dolphin__character_Lion__character_Possum__location_Bar
+~ Bar
 Nathan: [[Hi|Hello|Howdy]], welcome to the Trough!
 Nathan: Here are some choices.
 ~ BAR_CHOICE
@@ -11,22 +11,4 @@ Nathan: Here are some choices.
 	set EventManager.store_event_effects(2, -1)
 	=> END
 - End the conversation => END
-=> END
-
-~ Bar__character_Bird__character_Dolphin__character_Lion__character_Possum__dialogue_free_drink__location_Bar
-Nathan: Free drink!!!!!!!!
-Nathan: Here's a joke:
-- free_drink_1
-	Nathan: Nice. I'll learn how to give you that.
-- free_drink_2
-	Nathan: Nice. I'll learn how to give you that.
-=> END
-
-~ Bar__character_Bird__character_Dolphin__character_Lion__character_Possum__dialogue_bar_bounce__location_Bar
-Nathan: Shh!!
-Nathan: Here's a joke:
-- quieted_1
-	Nathan: Nice. I'll learn how to give you that.
-- quieted_2
-	Nathan: Nice. I'll learn how to give you that.
 => END

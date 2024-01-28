@@ -57,30 +57,23 @@ var base_bar_tags:Array[String] = BarTag + base_character_tags
 var free_drink_tag:Array[String] = ["dialogue:free_drink"]
 var bar_bounce_tag:Array[String] = ["dialogue:bar_bounce"]
 func _build_bar():
-	var free_drink = _build_event(Bar, [], base_bar_tags + free_drink_tag)
-	var bar_bounce = _build_event(Bar, [], base_bar_tags + bar_bounce_tag)
-	var bar = _build_event(Bar, [], base_bar_tags)
-	var bar_root = _build_event(Bar, [bar, free_drink, bar_bounce], base_bar_tags)
+	var bar_root = _build_event(Bar, [], [])
 	return bar_root
 
 var cafe_base_tags:Array[String] = CafeTag + base_character_tags
 func _build_cafe():
-	var cafe = _build_event(Cafe, [], cafe_base_tags)
-	var cafe_root = _build_event(Cafe, [cafe], cafe_base_tags)
+	var cafe_root = _build_event(Cafe, [], [])
 	return cafe_root
 
 var apartment_base_tags:Array[String] = ApartmentTag + base_character_tags
 func _build_apartment():
-	var apt = _build_event(Apartment, [], apartment_base_tags)
-	var apt_root = _build_event(Apartment, [apt], apartment_base_tags)
+	var apt_root = _build_event(Apartment, [], [])
 	return apt_root
 
 var library_base_tags:Array[String] = LibraryTag + base_character_tags
 var quieted_tag:Array[String] = ["dialogue:quieted"]
 func _build_library():
-	var quieted = _build_event(Library, [], library_base_tags + quieted_tag)
-	var lib = _build_event(Library, [], library_base_tags)
-	var lib_root = _build_event(Library, [lib, quieted], library_base_tags)
+	var lib_root = _build_event(Library, [], [])
 	return lib_root
 
 func _build_event(location_name:String, events:Array[LocationEvent], tags:Array[String]):
