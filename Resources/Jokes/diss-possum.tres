@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://bbw8lhekkaool"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_ndfwr"]
+
+[resource]
+script = ExtResource("1_ndfwr")
+category = "Roast"
+id = ""
+name = "make fun of Possum's jeans"
+wit = 0
+pride = 0
+obs = 0
+difficulty = 50
+tags = Array[String]([])
+dialogue = "res://Resources/Dialogues/diss-possum-joke.dialogue"

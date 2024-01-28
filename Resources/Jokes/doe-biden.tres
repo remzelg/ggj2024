@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://yyac5i0dhn0q"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_7vydp"]
+
+[resource]
+script = ExtResource("1_7vydp")
+category = "Outsmart"
+id = ""
+name = "Political Pun"
+wit = 40
+pride = 0
+obs = 0
+difficulty = 0
+tags = Array[String]([])
+dialogue = "res://Resources/Dialogues/doe-biden.dialogue"

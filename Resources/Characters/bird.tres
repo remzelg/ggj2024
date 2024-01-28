@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://b745ds3j2db52"]
+
+[ext_resource type="Script" path="res://Resources/Character.gd" id="1_pevve"]
+[ext_resource type="Resource" uid="uid://yyac5i0dhn0q" path="res://Resources/Jokes/doe-biden.tres" id="1_s6oma"]
+[ext_resource type="Resource" uid="uid://ueiwo7ba8xyj" path="res://Resources/Characters/bird-stats.tres" id="2_i748m"]
+
+[resource]
+script = ExtResource("1_pevve")
+name = "Bird"
+jokes = [ExtResource("1_s6oma")]
+stats = ExtResource("2_i748m")

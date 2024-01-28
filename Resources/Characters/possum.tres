@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://donrfs3v2qspm"]
+
+[ext_resource type="Resource" uid="uid://btesfctxlaq4h" path="res://Resources/Jokes/dive-person.tres" id="1_u0wgc"]
+[ext_resource type="Script" path="res://Resources/Character.gd" id="2_ggtro"]
+
+[resource]
+script = ExtResource("2_ggtro")
+name = "Possum"
+jokes = [ExtResource("1_u0wgc")]

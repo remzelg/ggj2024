@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://duypwrpjocfbm"
+path="res://.godot/imported/doe-biden.dialogue-442659844267710c13eacb8ee7d05773.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/doe-biden.dialogue"
+dest_files=["res://.godot/imported/doe-biden.dialogue-442659844267710c13eacb8ee7d05773.tres"]
+
+[params]
+
+defaults=true

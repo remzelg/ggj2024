@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://dn6qg33pkmeiq"]
+
+[ext_resource type="Script" path="res://stats.gd" id="1_1ng0y"]
+
+[resource]
+script = ExtResource("1_1ng0y")
+wit = 50
+obs = 20
+pride = 80
+delivery = 50

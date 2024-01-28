@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://kk3vktnxxh3a"
+path="res://.godot/imported/dive-person.dialogue-23c4d77d4634a4067727c98e114ccede.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/dive-person.dialogue"
+dest_files=["res://.godot/imported/dive-person.dialogue-23c4d77d4634a4067727c98e114ccede.tres"]
+
+[params]
+
+defaults=true

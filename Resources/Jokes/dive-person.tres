@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://btesfctxlaq4h"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_rqhdv"]
+
+[resource]
+script = ExtResource("1_rqhdv")
+category = "Observe"
+id = ""
+name = "Self-deprecate"
+wit = 0
+pride = 0
+obs = 0
+difficulty = 60
+tags = Array[String]([])
+dialogue = "res://Resources/Dialogues/dive-person.dialogue"

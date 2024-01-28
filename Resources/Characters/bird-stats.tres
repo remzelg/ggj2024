@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stats" load_steps=2 format=3 uid="uid://ueiwo7ba8xyj"]
+
+[ext_resource type="Script" path="res://stats.gd" id="1_f74cr"]
+
+[resource]
+script = ExtResource("1_f74cr")
+wit = 80
+obs = 20
+pride = 50
+delivery = 25

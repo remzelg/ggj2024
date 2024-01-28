@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="player" load_steps=5 format=3 uid="uid://d1fccnvw5eejw"]
+
+[ext_resource type="Resource" uid="uid://d3l02h5gvortd" path="res://Resources/Characters/dolphin.tres" id="1_hdy08"]
+[ext_resource type="Resource" uid="uid://chuy6r4h2b4ru" path="res://Resources/Jokes/tacos.tres" id="2_abiao"]
+[ext_resource type="Script" path="res://Player.gd" id="2_nc1oj"]
+[ext_resource type="Resource" uid="uid://ktm3gs58b6tk" path="res://Resources/stats/dolphin-player-stats.tres" id="3_4hns2"]
+
+[resource]
+script = ExtResource("2_nc1oj")
+character = ExtResource("1_hdy08")
+device_number = 0
+stats = ExtResource("3_4hns2")
+jokes = [ExtResource("2_abiao")]

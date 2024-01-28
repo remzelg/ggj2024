@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://d3l02h5gvortd"]
+
+[ext_resource type="Script" path="res://Resources/Character.gd" id="1_am0yy"]
+[ext_resource type="Resource" uid="uid://dte4stf3tis1k" path="res://Resources/Characters/dolphin-stats.tres" id="2_rf12u"]
+
+[resource]
+script = ExtResource("1_am0yy")
+name = "Dolphin"
+jokes = [null]
+stats = ExtResource("2_rf12u")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://chuy6r4h2b4ru"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_vcat1"]
+
+[resource]
+script = ExtResource("1_vcat1")
+category = "Observe"
+id = ""
+name = "Pick on the audience"
+wit = 0
+pride = 0
+obs = 0
+difficulty = 40
+tags = Array[String]([])
+dialogue = "res://Resources/Dialogues/tacos.dialogue"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bldpcks0wic8p"
+path="res://.godot/imported/tacos.dialogue-d6f4f0fd5a1757b965da2dcd5c7d5b49.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/tacos.dialogue"
+dest_files=["res://.godot/imported/tacos.dialogue-d6f4f0fd5a1757b965da2dcd5c7d5b49.tres"]
+
+[params]
+
+defaults=true
