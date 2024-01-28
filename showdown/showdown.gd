@@ -32,6 +32,7 @@ func _ready():
 func next_up():
 	change_positions()
 	$UI/JokeChoicePanel.show()
+	$JokeChoicePanel.prep_player()
 
 func tween_to_next_marker(actor):
 	var next_marker = get_next_marker(actor.curr_marker)
@@ -59,14 +60,19 @@ func _on_joke_finished(_joke_dialogue):
 
 func resolve_joke():
 	tween = get_tree().create_tween()
-	var curr_player_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_player+1))
-	tween.parallel().tween_property(curr_player_pop, "progress", curr_player_pop.progress + curr_joke_results.pop_inc, 0.5)
-	if curr_joke_results.has("target"): 
-		var target_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_joke_results.target+1))
-		tween.parallel().tween_property(target_pop, "progress", curr_joke_results.pop_hit, 0.5)
+	if curr_joke_results.hit:
+		var curr_player_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_player+1))
+		tween.parallel().tween_property(curr_player_pop, "progress", curr_player_pop.progress + curr_joke_results.pop_inc, 0.5)
+		if curr_joke_results.has("target"): 
+			var target_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_joke_results.target+1))
+			tween.parallel().tween_property(target_pop, "progress", curr_joke_results.pop_hit, 0.5)
+		tween.play()
+		await tween.finished
 	# TODO: audience animation tween
-	tween.play()
-	await tween.finished
+	else:
+		# TODO: sad character here
+		print("failed joke!")
+
 	next_up()
 	
 func prepare_joke_results(joke):

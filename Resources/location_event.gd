@@ -6,6 +6,7 @@ extends Resource
 @export var events:Array[LocationEvent]
 # Tags are like `key:value`
 # `character:Foo`
+
 @export var tags:Array[String]
 var tags_sorted = false
 
