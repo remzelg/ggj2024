@@ -52,7 +52,7 @@ func init_player(playerId:int) -> void:
 func tick() -> void:
 	if !turns_init:
 		# TODO read from settings or something
-		totalTurns = 1
+		totalTurns = 3
 		currentTurn = 1
 		playerPtr = -1
 		turns_init = true

@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://soh18doic8au"]
+
+[ext_resource type="Script" path="res://WinScreen.gd" id="1_d5g86"]
+[ext_resource type="Texture2D" uid="uid://cobnx34jl6vwe" path="res://assets/Art/7F73FBA0-9B8E-44BA-A6DB-1A07BC867048.png" id="2_7eoe6"]
+[ext_resource type="Texture2D" uid="uid://bm6mg8h22hb8e" path="res://assets/Art/06CF838C-22BC-44BD-A454-839C49A13932.png" id="2_cgke1"]
+[ext_resource type="Texture2D" uid="uid://bd5fhv3c5aouy" path="res://assets/Art/62B26113-E641-41A7-A74E-1AEE35A162AD.png" id="3_0icuk"]
+[ext_resource type="Texture2D" uid="uid://ux2xcmo5g0l4" path="res://assets/Art/FC16E417-755D-4A8C-A0D6-B404FC00D378.png" id="4_ym5am"]
+[ext_resource type="Texture2D" uid="uid://b7pqp1046wa1r" path="res://assets/Art/B7D4713E-267F-4205-96D4-6B9CD204F79D.png" id="5_4ws8s"]
+[ext_resource type="Texture2D" uid="uid://dlqjesgq2xt66" path="res://assets/Art/5D63040E-BF26-4B30-A4BD-05C59BB6CF4A.png" id="6_v1su3"]
+[ext_resource type="AudioStream" uid="uid://tufbrmggjvbx" path="res://assets/music/Crowd Cheering.wav" id="7_mqk6v"]
+[ext_resource type="Texture2D" uid="uid://ld3w66731phu" path="res://assets/Art/won.png" id="7_uf7w0"]
+[ext_resource type="AudioStream" uid="uid://cmgq4gj66lvum" path="res://assets/music/Menu.mp3" id="8_qs7pf"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d5g86")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+visible = false
+texture = ExtResource("2_7eoe6")
+
+[node name="possum" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(630.5, 427.5)
+texture = ExtResource("2_cgke1")
+
+[node name="bird" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(630.5, 427.5)
+texture = ExtResource("4_ym5am")
+
+[node name="lion" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(630.5, 427.5)
+texture = ExtResource("3_0icuk")
+
+[node name="dolphin" type="Sprite2D" parent="Node"]
+visible = false
+position = Vector2(630.5, 427.5)
+texture = ExtResource("5_4ws8s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_v1su3")
+metadata/_edit_lock_ = true
+
+[node name="Won" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 32.0
+offset_right = 1072.0
+offset_bottom = 305.0
+texture = ExtResource("7_uf7w0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mqk6v")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qs7pf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
