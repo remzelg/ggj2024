@@ -11,19 +11,23 @@ var tags_sorted = false
 
 # returns the depth-first first found LocationEvent with no leaves that matches all tags
 func for_tags(tags:Array[String]) -> LocationEvent:
+	var matching = _for_tags(tags)
+	return matching[randi() % matching.size()] # select one of the unfiltered mfs
+
+func _for_tags(tags:Array[String]) -> Array[LocationEvent]:
+	var matching:Array[LocationEvent] = []
 	if events == []:
-		return self
+		var res:Array[LocationEvent] = [self]
+		return res
 	for candidate in events:
-		var tag_matches = 0
-		var seeking = len(tags)
 		for t in tags:
 			for c in candidate.tags:
 				if t == c:
-					tag_matches += 1
-					if tag_matches == seeking:
-						return candidate.for_tags(tags)
-	return self # TODO: fallback/default if no all matching tags found
-	
+					matching.append(candidate)
+					matching.append(candidate.for_tags(tags))
+	return matching
+		
+
 func dialogue_target():
 	return load("res://Resources/Dialogues/" + location_name + ".dialogue")
 

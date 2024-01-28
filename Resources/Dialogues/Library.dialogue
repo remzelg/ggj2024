@@ -1,4 +1,4 @@
-~ Library
+~ Library__character_Bird__character_Dolphin__character_Lion__character_Possum__location_Library
 Nathan: [[Hi|Hello|Howdy]], welcome to the Library!
 Nathan: Here are some choices.
 ~ LIBRARY_CHOICE
@@ -8,7 +8,7 @@ Nathan: Here are some choices.
 - End the conversation => END
 => END
 
-~ Library__dialogue_quieted
+~ Library__character_Bird__character_Dolphin__character_Lion__character_Possum__dialogue_quieted__location_Library
 Nathan: Shh!!
 Nathan: Here's a joke:
 - quieted_1

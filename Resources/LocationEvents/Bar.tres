@@ -1,21 +1,27 @@
-[gd_resource type="Resource" script_class="LocationEvent" load_steps=4 format=3 uid="uid://cckqhcmwhs6nc"]
+[gd_resource type="Resource" script_class="LocationEvent" load_steps=5 format=3 uid="uid://cckqhcmwhs6nc"]
 
 [ext_resource type="Script" path="res://Resources/location_event.gd" id="1_srp1l"]
 
-[sub_resource type="Resource" id="Resource_6kc34"]
+[sub_resource type="Resource" id="Resource_kyidx"]
 script = ExtResource("1_srp1l")
 location_name = "Bar"
 events = Array[ExtResource("1_srp1l")]([])
-tags = Array[String](["character:Lion"])
+tags = Array[String](["character:Bird", "character:Dolphin", "character:Lion", "character:Possum", "location:Bar"])
 
-[sub_resource type="Resource" id="Resource_vb48j"]
+[sub_resource type="Resource" id="Resource_7u2yy"]
 script = ExtResource("1_srp1l")
 location_name = "Bar"
 events = Array[ExtResource("1_srp1l")]([])
-tags = Array[String](["dialogue:free_drink"])
+tags = Array[String](["character:Bird", "character:Dolphin", "character:Lion", "character:Possum", "dialogue:free_drink", "location:Bar"])
+
+[sub_resource type="Resource" id="Resource_ld41h"]
+script = ExtResource("1_srp1l")
+location_name = "Bar"
+events = Array[ExtResource("1_srp1l")]([])
+tags = Array[String](["character:Bird", "character:Dolphin", "character:Lion", "character:Possum", "dialogue:bar_bounce", "location:Bar"])
 
 [resource]
 script = ExtResource("1_srp1l")
 location_name = "Bar"
-events = Array[ExtResource("1_srp1l")]([SubResource("Resource_6kc34"), SubResource("Resource_vb48j")])
-tags = Array[String]([])
+events = Array[ExtResource("1_srp1l")]([SubResource("Resource_kyidx"), SubResource("Resource_7u2yy"), SubResource("Resource_ld41h")])
+tags = Array[String](["character:Bird", "character:Dolphin", "character:Lion", "character:Possum", "location:Bar"])

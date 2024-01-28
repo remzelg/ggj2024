@@ -1,4 +1,4 @@
-~ Bar
+~ Bar__character_Bird__character_Dolphin__character_Lion__character_Possum__location_Bar
 Nathan: [[Hi|Hello|Howdy]], welcome to the Trough!
 Nathan: Here are some choices.
 ~ BAR_CHOICE
@@ -13,12 +13,7 @@ Nathan: Here are some choices.
 - End the conversation => END
 => END
 
-~ Bar__character_Lion
-Nathan: Rawr! Welcome to the Trough.
-=> BAR_CHOICE
-=> END
-
-~ Bar__dialogue_free_drink
+~ Bar__character_Bird__character_Dolphin__character_Lion__character_Possum__dialogue_free_drink__location_Bar
 Nathan: Free drink!!!!!!!!
 Nathan: Here's a joke:
 - free_drink_1
@@ -27,7 +22,7 @@ Nathan: Here's a joke:
 	Nathan: Nice. I'll learn how to give you that.
 => END
 
-~ Bar__dialogue_bar_bounce
+~ Bar__character_Bird__character_Dolphin__character_Lion__character_Possum__dialogue_bar_bounce__location_Bar
 Nathan: Shh!!
 Nathan: Here's a joke:
 - quieted_1

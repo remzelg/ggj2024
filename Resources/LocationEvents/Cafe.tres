@@ -1,9 +1,15 @@
-[gd_resource type="Resource" script_class="LocationEvent" load_steps=2 format=3 uid="uid://ca6x54effrrl8"]
+[gd_resource type="Resource" script_class="LocationEvent" load_steps=3 format=3 uid="uid://ca6x54effrrl8"]
 
 [ext_resource type="Script" path="res://Resources/location_event.gd" id="1_5cb2y"]
+
+[sub_resource type="Resource" id="Resource_1letp"]
+script = ExtResource("1_5cb2y")
+location_name = "Cafe"
+events = Array[ExtResource("1_5cb2y")]([])
+tags = Array[String](["character:Bird", "character:Dolphin", "character:Lion", "character:Possum", "location:Cafe"])
 
 [resource]
 script = ExtResource("1_5cb2y")
 location_name = "Cafe"
-events = Array[ExtResource("1_5cb2y")]([])
-tags = Array[String]([])
+events = Array[ExtResource("1_5cb2y")]([SubResource("Resource_1letp")])
+tags = Array[String](["character:Bird", "character:Dolphin", "character:Lion", "character:Possum", "location:Cafe"])
