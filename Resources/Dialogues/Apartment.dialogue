@@ -1,0 +1,9 @@
+~ Apartment
+Nathan: [[Hi|Hello|Howdy]], welcome to your hovel!
+Nathan: Here are some choices.
+~ APARTMENT_CHOICE
+- Drink beer
+	Nathan: You drink a beer from your fridge. Have another?
+	=> APARTMENT_CHOICE
+- End the conversation => END
+=> END

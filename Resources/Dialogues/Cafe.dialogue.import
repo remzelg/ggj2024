@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bb14wgmwf4de8"
+path="res://.godot/imported/Cafe.dialogue-5811cfee4e41358a15357a2525664343.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/Cafe.dialogue"
+dest_files=["res://.godot/imported/Cafe.dialogue-5811cfee4e41358a15357a2525664343.tres"]
+
+[params]
+
+defaults=true

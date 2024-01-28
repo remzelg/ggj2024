@@ -1,0 +1,9 @@
+~ Cafe
+Nathan: [[Hi|Hello|Howdy]], welcome to Udder Deligts!
+Nathan: Here are some choices.
+~ CAFE_CHOICE
+- Drink coffee
+	Nathan: You drink a coffee. Have another?
+	=> CAFE_CHOICE
+- End the conversation => END
+=> END

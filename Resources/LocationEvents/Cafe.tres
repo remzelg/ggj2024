@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LocationEvent" load_steps=2 format=3 uid="uid://ca6x54effrrl8"]
+
+[ext_resource type="Script" path="res://Resources/location_event.gd" id="1_xg4no"]
+
+[resource]
+script = ExtResource("1_xg4no")
+location_name = "Cafe"
+events = Array[ExtResource("1_xg4no")]([])
+tags = Array[String]([])
