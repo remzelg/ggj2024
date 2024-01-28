@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by1rias8k0f73"
+path="res://.godot/imported/Ambient Noise.wav-dedb0f5bfcbef39ef3f9f6f4d151b157.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Ambient Noise.wav"
+dest_files=["res://.godot/imported/Ambient Noise.wav-dedb0f5bfcbef39ef3f9f6f4d151b157.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

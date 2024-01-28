@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://2vtn8mjr0n1n"]
+[gd_scene load_steps=5 format=3 uid="uid://2vtn8mjr0n1n"]
 
 [ext_resource type="Script" path="res://showdown/popularity_bar.gd" id="1_qnk6q"]
 [ext_resource type="Texture2D" uid="uid://bygj1p17hyynl" path="res://assets/Art/99DE88A1-1911-496B-9A05-3F681775346E.png" id="2_hd0pw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_itvsg"]
+bg_color = Color(0.592157, 0.607843, 0.729412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5kw3"]
+bg_color = Color(0.0980392, 0.113725, 0.611765, 1)
 
 [node name="PopularityBar" type="VBoxContainer"]
 anchors_preset = 15
@@ -21,4 +27,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_itvsg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_f5kw3")
+fill_mode = 3
 show_percentage = false

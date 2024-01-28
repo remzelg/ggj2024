@@ -1,4 +1,4 @@
-extends Panel
+extends TextureRect
 
 @export var curr_player : Resource
 signal joke_chosen(joke)
@@ -15,9 +15,15 @@ func _ready():
 func _on_category_selected(category):
 	chosen_category = category
 	change_categories_visibility(false)
+	$BackButton.show()
 	load_jokes()
 	$Margins.visible = true
 
+func prep_player(new_player):
+	curr_player = new_player
+	$Margins.visible = false
+	for child in $Categories.get_children():
+		child.visible = true
 	
 
 func change_categories_visibility(show):
@@ -42,3 +48,11 @@ func _on_option_chosen(joke):
 	hide()
 	joke_chosen.emit(joke)
 	
+
+
+func _on_back_button_pressed():
+	$Margins.hide()
+	$BackButton.hide()
+	for child in $Categories.get_children():
+		child.show()
+	pass # Replace with function body.

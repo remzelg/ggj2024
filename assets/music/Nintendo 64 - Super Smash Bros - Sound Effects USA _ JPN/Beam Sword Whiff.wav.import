@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bygn7w7n6wmmp"
+path="res://.godot/imported/Beam Sword Whiff.wav-e584e6fda461faaaa0030d2e9ff07976.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Beam Sword Whiff.wav"
+dest_files=["res://.godot/imported/Beam Sword Whiff.wav-e584e6fda461faaaa0030d2e9ff07976.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

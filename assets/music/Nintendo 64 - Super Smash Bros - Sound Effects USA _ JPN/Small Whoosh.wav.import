@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cy2oa8xc0t8wa"
+path="res://.godot/imported/Small Whoosh.wav-9dcec3c7cf0fc6b816815bd5b127746e.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Small Whoosh.wav"
+dest_files=["res://.godot/imported/Small Whoosh.wav-9dcec3c7cf0fc6b816815bd5b127746e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://da26fr2xkicr4"
+path="res://.godot/imported/Ta-Tap.wav-6ed86045ae776fb3df4691ab4527cf0a.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Ta-Tap.wav"
+dest_files=["res://.godot/imported/Ta-Tap.wav-6ed86045ae776fb3df4691ab4527cf0a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

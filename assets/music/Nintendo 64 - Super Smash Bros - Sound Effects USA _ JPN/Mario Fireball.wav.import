@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ybumhe3h87ob"
+path="res://.godot/imported/Mario Fireball.wav-2441b1e7cb17a56794654ea4596b9ae7.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Mario Fireball.wav"
+dest_files=["res://.godot/imported/Mario Fireball.wav-2441b1e7cb17a56794654ea4596b9ae7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

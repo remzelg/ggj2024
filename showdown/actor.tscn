@@ -6,5 +6,5 @@
 [node name="Actor" type="AnimatedSprite2D"]
 position = Vector2(576, 284)
 sprite_frames = ExtResource("1_7y3ow")
-animation = &"lion_default"
+animation = &"possum_happy"
 script = ExtResource("2_i81th")

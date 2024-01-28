@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bndg8lby7s2kk"]
+[gd_scene load_steps=22 format=3 uid="uid://bndg8lby7s2kk"]
 
 [ext_resource type="Script" path="res://showdown/showdown.gd" id="1_svx04"]
 [ext_resource type="Texture2D" uid="uid://bstko3k7bwre5" path="res://assets/Art/3F59F722-26A0-4A14-B182-F57373574DC1.jpeg" id="2_knugo"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://2vtn8mjr0n1n" path="res://showdown/popularity_bar.tscn" id="5_0j51a"]
 [ext_resource type="Script" path="res://showdown/JokeChoicePanel.gd" id="6_5qlw4"]
 [ext_resource type="Texture2D" uid="uid://bygj1p17hyynl" path="res://assets/Art/99DE88A1-1911-496B-9A05-3F681775346E.png" id="6_bpqtt"]
+[ext_resource type="Texture2D" uid="uid://cobnx34jl6vwe" path="res://assets/Art/7F73FBA0-9B8E-44BA-A6DB-1A07BC867048.png" id="6_ntwq6"]
 [ext_resource type="PackedScene" uid="uid://d0p7s057is5o" path="res://showdown/joke_category_choice.tscn" id="6_yf8cr"]
 [ext_resource type="Texture2D" uid="uid://ddrb6g71asnxf" path="res://assets/Art/4CD18E62-F569-4D46-849C-477430EFCF19.png" id="7_1kvta"]
 [ext_resource type="PackedScene" uid="uid://c4fon5fyxs6d3" path="res://showdown/joke_option.tscn" id="7_hsgam"]
@@ -15,6 +16,54 @@
 [ext_resource type="Texture2D" uid="uid://m8jl0bq5j0qs" path="res://assets/Art/7AA50B42-9F93-4491-A4CC-A65958FCE7AF.png" id="9_0e2n7"]
 [ext_resource type="Texture2D" uid="uid://cmqjawt86jyq6" path="res://assets/Art/0E141DA5-2966-463B-A573-460605A71EB1.png" id="9_ycmvc"]
 [ext_resource type="Texture2D" uid="uid://bs3o62t5rgsgm" path="res://assets/Art/68F4F8A4-CBCB-4DF2-89C4-4450025D0429.png" id="9_yrw6n"]
+[ext_resource type="Texture2D" uid="uid://bnpadyhi702aa" path="res://assets/Art/FD152536-B023-4C10-B482-21173C4A653A.png" id="10_a83nf"]
+[ext_resource type="Texture2D" uid="uid://cjpdyi7juk47m" path="res://assets/Art/3EE9AEE5-192B-40E6-AEC1-24E08E8BD0A1.png" id="17_kextt"]
+[ext_resource type="Texture2D" uid="uid://clcwrbtjeeqta" path="res://assets/Art/2D60BF23-6D99-4F7A-B3FD-A13CE2A8B54E.png" id="18_d5msj"]
+
+[sub_resource type="Animation" id="Animation_fbmki"]
+resource_name = "react"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Audience:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.8, 1.1, 1.4, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(160, 581), Vector2(160, 600), Vector2(160, 560), Vector2(160, 610), Vector2(160, 560), Vector2(160, 570), Vector2(160, 580), Vector2(160, 581)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Audience2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.3, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(664, 614), Vector2(664, 650), Vector2(664, 570), Vector2(664, 650), Vector2(664, 580), Vector2(664, 640), Vector2(664, 614)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Audience3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.8, 1, 1.3, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1101, 608), Vector2(1101, 570), Vector2(1101, 630), Vector2(1101, 600), Vector2(1101, 560), Vector2(1101, 570), Vector2(1101, 670), Vector2(1101, 580), Vector2(1101, 608)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ox2x"]
+_data = {
+"react": SubResource("Animation_fbmki")
+}
 
 [node name="Showdown" type="Control"]
 layout_mode = 3
@@ -39,29 +88,26 @@ metadata/_edit_lock_ = true
 
 [node name="Actors" type="Node" parent="2DScene"]
 
-[node name="Lion" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
-texture_filter = 1
-position = Vector2(725, 313)
-animation = &"possum_talking"
-character_name = "lion"
-
 [node name="Possum" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
 texture_filter = 1
-position = Vector2(288, 322)
-animation = &"possum_talking"
+position = Vector2(686, 342)
 character_name = "possum"
-
-[node name="Dolphin" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
-texture_filter = 1
-position = Vector2(978, 256)
-animation = &"dolphin_default"
-character_name = "dolphin"
 
 [node name="Bird" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
 texture_filter = 1
-position = Vector2(487, 229)
-animation = &"possum_talking"
+position = Vector2(342, 276)
 character_name = "bird"
+
+[node name="Lion" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
+texture_filter = 1
+position = Vector2(553, 187)
+character_name = "lion"
+
+[node name="Dolphin" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
+texture_filter = 1
+position = Vector2(927, 219)
+animation = &"dolphin_default"
+character_name = "dolphin"
 
 [node name="Markers" type="Node" parent="2DScene"]
 
@@ -72,26 +118,47 @@ position = Vector2(685, 343)
 position = Vector2(339, 276)
 
 [node name="OnDeck" type="Marker2D" parent="2DScene/Markers"]
-position = Vector2(499, 190)
+position = Vector2(553, 187)
 
 [node name="Last" type="Marker2D" parent="2DScene/Markers"]
-position = Vector2(939, 262)
+position = Vector2(925, 217)
+
+[node name="Node" type="Node" parent="2DScene"]
+
+[node name="Audience" type="Sprite2D" parent="2DScene/Node"]
+position = Vector2(160, 576.667)
+texture = ExtResource("18_d5msj")
+
+[node name="Audience2" type="Sprite2D" parent="2DScene/Node"]
+position = Vector2(664, 570)
+texture = ExtResource("17_kextt")
+
+[node name="Audience3" type="Sprite2D" parent="2DScene/Node"]
+position = Vector2(1101, 620)
+texture = ExtResource("6_ntwq6")
+
+[node name="AudienceAnim" type="AnimationPlayer" parent="2DScene/Node"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_5ox2x")
+}
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="UI"]
+[node name="Panel" type="TextureRect" parent="UI"]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -294.0
-offset_top = -159.0
-offset_right = 6.0
-offset_bottom = 191.0
+offset_left = -249.0
+offset_top = -193.0
+offset_bottom = 157.0
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("4_xncoc")
+texture = ExtResource("10_a83nf")
+expand_mode = 1
 
 [node name="Margin" type="MarginContainer" parent="UI/Panel"]
 layout_mode = 1
@@ -146,7 +213,7 @@ offset_top = 0.199997
 offset_right = 0.0799561
 offset_bottom = 0.319992
 
-[node name="JokeChoicePanel" type="Panel" parent="UI"]
+[node name="JokeChoicePanel" type="TextureRect" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.242188
 anchor_top = 0.576389
@@ -155,26 +222,27 @@ anchor_bottom = 0.905556
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("4_xncoc")
+texture = ExtResource("10_a83nf")
 script = ExtResource("6_5qlw4")
 metadata/_edit_use_anchors_ = true
 
 [node name="Margins" type="MarginContainer" parent="UI/JokeChoicePanel"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 32
+theme_override_constants/margin_left = 128
 theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
+theme_override_constants/margin_right = 128
 theme_override_constants/margin_bottom = 32
 
 [node name="Column" type="VBoxContainer" parent="UI/JokeChoicePanel/Margins"]
 layout_mode = 2
 
-[node name="JokeOption" parent="UI/JokeChoicePanel/Margins/Column" instance=ExtResource("7_hsgam")]
+[node name="BackOp" parent="UI/JokeChoicePanel/Margins/Column" instance=ExtResource("7_hsgam")]
+visible = false
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Joke Text
@@ -212,8 +280,18 @@ texture_hover = ExtResource("9_yrw6n")
 texture_disabled = ExtResource("9_yrw6n")
 texture_focused = ExtResource("9_yrw6n")
 
+[node name="BackButton" type="Button" parent="UI/JokeChoicePanel"]
+visible = false
+layout_mode = 0
+offset_left = 16.9994
+offset_top = 14.9999
+offset_right = 105.999
+offset_bottom = 50.9999
+text = "Back"
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0a6ip")
 autoplay = true
 
 [connection signal="joke_chosen" from="UI/JokeChoicePanel" to="." method="_on_joke_chosen"]
+[connection signal="pressed" from="UI/JokeChoicePanel/BackButton" to="UI/JokeChoicePanel" method="_on_back_button_pressed"]

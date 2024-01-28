@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://d3l02h5gvortd"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://d3l02h5gvortd"]
 
+[ext_resource type="Resource" uid="uid://chuy6r4h2b4ru" path="res://Resources/Jokes/tacos.tres" id="1_017qt"]
 [ext_resource type="Script" path="res://Resources/Character.gd" id="1_am0yy"]
 [ext_resource type="Resource" uid="uid://dte4stf3tis1k" path="res://Resources/Characters/dolphin-stats.tres" id="2_rf12u"]
 
 [resource]
 script = ExtResource("1_am0yy")
 name = "Dolphin"
-jokes = [null]
+jokes = [ExtResource("1_017qt")]
 stats = ExtResource("2_rf12u")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://l4ifqsawceeg"
+path="res://.godot/imported/Shell Hit 2.wav-18d8be6a0b4bdc61c06664e5d9887f28.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Shell Hit 2.wav"
+dest_files=["res://.godot/imported/Shell Hit 2.wav-18d8be6a0b4bdc61c06664e5d9887f28.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

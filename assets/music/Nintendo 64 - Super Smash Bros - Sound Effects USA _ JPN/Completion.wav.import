@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh0h17vocjjmm"
+path="res://.godot/imported/Completion.wav-c7cc7cc5cad62a77f9a7793bacc73f8e.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Completion.wav"
+dest_files=["res://.godot/imported/Completion.wav-c7cc7cc5cad62a77f9a7793bacc73f8e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

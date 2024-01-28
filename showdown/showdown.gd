@@ -11,6 +11,7 @@ extends Control
 }
 @onready var PopRow = $UI/Panel/Margin/Row.get_children()
 
+const HIT_FACTOR = 0.01
 var curr_player
 var curr_joke_results
 var example = load("res://Resources/Dialogues/example.dialogue")
@@ -19,6 +20,7 @@ var example = load("res://Resources/Dialogues/example.dialogue")
 	return $UI/JokeBubbleContainer
 
 func _ready():
+	$AudioStreamPlayer.stream.set_loop(true)
 	DialogueManager.get_current_scene = get_joke_container
 	DialogueManager.dialogue_ended.connect(_on_joke_finished)
 
@@ -30,9 +32,13 @@ func _ready():
 	$"2DScene/Actors/Bird".curr_marker = "Next"
 
 func next_up():
+	if curr_player == 3:
+		curr_player = 0
+	else:
+		curr_player = curr_player + 1
 	change_positions()
 	$UI/JokeChoicePanel.show()
-	$JokeChoicePanel.prep_player()
+	$UI/JokeChoicePanel.prep_player(PlayerManager.player_resources[curr_player])
 
 func tween_to_next_marker(actor):
 	var next_marker = get_next_marker(actor.curr_marker)
@@ -59,6 +65,8 @@ func _on_joke_finished(_joke_dialogue):
 	resolve_joke()
 
 func resolve_joke():
+	var actor = $"2DScene/Actors".get_child(curr_player)
+	actor.process_mode = Node.PROCESS_MODE_DISABLED
 	tween = get_tree().create_tween()
 	if curr_joke_results.hit:
 		var curr_player_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_player+1))
@@ -66,13 +74,22 @@ func resolve_joke():
 		if curr_joke_results.has("target"): 
 			var target_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_joke_results.target+1))
 			tween.parallel().tween_property(target_pop, "progress", curr_joke_results.pop_hit, 0.5)
+		%AudienceAnim.play("react")
+		AudioManager.play_fx("cheer")
 		tween.play()
-		await tween.finished
+		actor.play_string("_happy")
+		await %AudienceAnim.animation_finished
+		AudioManager.play_fx("good")
 	# TODO: audience animation tween
 	else:
 		# TODO: sad character here
-		print("failed joke!")
-
+		actor.play_string("_sad")
+		AudioManager.play_fx("boo")
+		%AudienceAnim.play("react")
+		await %AudienceAnim.animation_finished
+		AudioManager.play_fx("bad")
+	actor.process_mode = Node.PROCESS_MODE_INHERIT
+	actor.play_string("_default")
 	next_up()
 	
 func prepare_joke_results(joke):
@@ -87,18 +104,27 @@ func prepare_joke_results(joke):
 	
 func check_hit(joke):
 	var res = PlayerManager.player_resources[curr_player]
-	print(res.stats.delivery)
-	return (randi_range(1, 100) > res.stats.delivery)
+	var key_stat = ""
+	match joke.category:
+		"Observe":
+			key_stat = res.stats.obs
+		"Outsmart":
+			key_stat = res.stats.wit
+		"Roast":
+			key_stat = res.stats.pride
+			
+	return (randi_range(1, 50) + joke.difficulty) <= (res.stats.delivery + key_stat)
+
 
 func calc_pop_inc(joke):
 	var res = PlayerManager.player_resources[curr_player]
 	match joke.category:
 		"Roast":
-			return joke.difficulty * res.stats.pride
+			return joke.difficulty * res.stats.pride * HIT_FACTOR
 		"Observe":
-			return joke.difficulty * res.stats.obs
+			return joke.difficulty * res.stats.obs * HIT_FACTOR
 		"Outsmart":
-			return joke.difficulty * res.stats.wit
+			return joke.difficulty * res.stats.wit * HIT_FACTOR
 
 func calc_pop_hit(joke):
 	var res = PlayerManager.player_resources[curr_player]

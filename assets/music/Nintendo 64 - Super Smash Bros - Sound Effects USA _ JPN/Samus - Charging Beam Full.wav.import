@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ox8jdc8i1nwb"
+path="res://.godot/imported/Samus - Charging Beam Full.wav-588da2bb3f5842b02698990f20165619.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Samus - Charging Beam Full.wav"
+dest_files=["res://.godot/imported/Samus - Charging Beam Full.wav-588da2bb3f5842b02698990f20165619.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

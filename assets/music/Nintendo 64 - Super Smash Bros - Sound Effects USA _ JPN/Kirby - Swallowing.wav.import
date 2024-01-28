@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bqcvh0trtm217"
+path="res://.godot/imported/Kirby - Swallowing.wav-075daa3d525bb28c41e7cde2a67131bc.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Kirby - Swallowing.wav"
+dest_files=["res://.godot/imported/Kirby - Swallowing.wav-075daa3d525bb28c41e7cde2a67131bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

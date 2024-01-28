@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bypjg3skfmkgu"
+path="res://.godot/imported/DK - Super Hit.wav-590460afdef25de81a4986bffc2e51f5.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/DK - Super Hit.wav"
+dest_files=["res://.godot/imported/DK - Super Hit.wav-590460afdef25de81a4986bffc2e51f5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

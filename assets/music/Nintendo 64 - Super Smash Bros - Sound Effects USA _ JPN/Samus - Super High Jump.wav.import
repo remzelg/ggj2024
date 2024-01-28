@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpw5x7ybgxu6q"
+path="res://.godot/imported/Samus - Super High Jump.wav-a79a5ca6cc0290655d17773c5a5406b9.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Samus - Super High Jump.wav"
+dest_files=["res://.godot/imported/Samus - Super High Jump.wav-a79a5ca6cc0290655d17773c5a5406b9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

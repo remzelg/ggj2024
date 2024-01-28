@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dli07i4iquuqu"
+path="res://.godot/imported/Samus - Grappling Hook.wav-082522ebe05f648bb0001eb94184acb6.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Samus - Grappling Hook.wav"
+dest_files=["res://.godot/imported/Samus - Grappling Hook.wav-082522ebe05f648bb0001eb94184acb6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

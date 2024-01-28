@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dsmy7gxher2hw"
+path="res://.godot/imported/Acid Burn.wav-f37fa1116e0502eba3e7bfd113fff63a.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Acid Burn.wav"
+dest_files=["res://.godot/imported/Acid Burn.wav-f37fa1116e0502eba3e7bfd113fff63a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

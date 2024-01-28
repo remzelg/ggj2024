@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dar647hu5emsu"
+path="res://.godot/imported/Kirby - Stone Drop.wav-0129e901e78b03323735c19ac0243cdb.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Kirby - Stone Drop.wav"
+dest_files=["res://.godot/imported/Kirby - Stone Drop.wav-0129e901e78b03323735c19ac0243cdb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djf1f86v4sktw"
+path="res://.godot/imported/C Falcon - Jump Flip Hit.wav-53e3e2bddc2ada3a82853be22cdba77b.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/C Falcon - Jump Flip Hit.wav"
+dest_files=["res://.godot/imported/C Falcon - Jump Flip Hit.wav-53e3e2bddc2ada3a82853be22cdba77b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

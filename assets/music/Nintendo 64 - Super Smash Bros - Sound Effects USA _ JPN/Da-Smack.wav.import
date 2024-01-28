@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcxpm6qsfkg4r"
+path="res://.godot/imported/Da-Smack.wav-9bb5aa691e13d6436bd9a3a539e95e35.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Da-Smack.wav"
+dest_files=["res://.godot/imported/Da-Smack.wav-9bb5aa691e13d6436bd9a3a539e95e35.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

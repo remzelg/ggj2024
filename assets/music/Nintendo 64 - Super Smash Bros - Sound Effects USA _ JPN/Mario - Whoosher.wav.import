@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://fpnjxh02ll16"
+path="res://.godot/imported/Mario - Whoosher.wav-aa4fdd63cc63166b37e1d00339f2a598.sample"
+
+[deps]
+
+source_file="res://assets/music/Nintendo 64 - Super Smash Bros - Sound Effects USA _ JPN/Mario - Whoosher.wav"
+dest_files=["res://.godot/imported/Mario - Whoosher.wav-aa4fdd63cc63166b37e1d00339f2a598.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
