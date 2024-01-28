@@ -2,11 +2,11 @@ extends VBoxContainer
 
 @export var profile : Texture
 @export var progress : int
+@export var char_id : int
 signal won()
 
 func _ready():
 	$Profile.texture = profile
-	progress = 20
 
 func _process(_delta):
 	$Popularity.value = progress

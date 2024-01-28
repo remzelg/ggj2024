@@ -31,3 +31,5 @@ theme_override_styles/background = SubResource("StyleBoxFlat_itvsg")
 theme_override_styles/fill = SubResource("StyleBoxFlat_f5kw3")
 fill_mode = 3
 show_percentage = false
+
+[connection signal="value_changed" from="Popularity" to="." method="_emit_won"]

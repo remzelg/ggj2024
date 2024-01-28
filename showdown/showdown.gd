@@ -3,8 +3,9 @@ extends Control
 @onready var tween
 @onready var input = DeviceInput.new(-1)
 
-@onready var PopRow = $UI/Panel/Margin/Row.get_children()
+@onready var PopRow = $UI/Panel/Margin/Row
 
+@onready var win_screen = load("res://win_screen.tscn")
 const HIT_FACTOR = 0.01
 var curr_player = -1
 var curr_joke_results
@@ -17,6 +18,7 @@ func _ready():
 	$AudioStreamPlayer.stream.set_loop(true)
 	DialogueManager.get_current_scene = get_joke_container
 	DialogueManager.dialogue_ended.connect(_on_joke_finished)
+
 
 func next_up():
 	if curr_player == PlayerManager.playerCount - 1:
@@ -42,7 +44,9 @@ func get_right_characters():
 			last_marker.get_parent().remove_child(last_marker)
 			last_marker.queue_free()
 			$UI/Panel/Margin/Row.get_children()[child.get_index()].queue_free()
-		
+	for child in PopRow.get_children():
+			child.won.connect(_on_player_won.bind(child.char_id))
+
 func tween_to_next_marker(actor):
 	var next_marker = get_next_marker(actor.curr_marker)
 	tween.parallel().tween_property(actor, "position",next_marker.position, .5)
@@ -127,8 +131,13 @@ func check_hit(joke):
 		"Roast":
 			key_stat = res.stats.pride
 			
-	return randi_range(joke.difficulty, 300) <= ((res.stats.delivery + key_stat) * 0.7)
+	return randi_range(joke.difficulty, 200) <= ((res.stats.delivery + key_stat))
 
+func _on_player_won(ind):
+	var scene = win_screen.instantiate()
+	scene.init(ind)
+	get_parent().add_child(scene)
+	queue_free()
 
 func calc_pop_inc(joke):
 	var res = get_player_resource(curr_player)
