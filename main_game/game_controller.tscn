@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://62q535jvutkq"]
+[gd_scene load_steps=10 format=3 uid="uid://62q535jvutkq"]
 
 [ext_resource type="Script" path="res://main_game/game_controller.gd" id="1_171tw"]
 [ext_resource type="PackedScene" uid="uid://dlf4e2e3e3dqd" path="res://main_game/pawn.tscn" id="2_mxtet"]
+[ext_resource type="Texture2D" uid="uid://dlqjesgq2xt66" path="res://assets/Art/5D63040E-BF26-4B30-A4BD-05C59BB6CF4A.png" id="2_p0db1"]
 [ext_resource type="PackedScene" uid="uid://bec1hg1g3n68v" path="res://main_game/location.tscn" id="3_5osb3"]
 [ext_resource type="PackedScene" uid="uid://d3ovmlsn67rv5" path="res://main_game/player_card.tscn" id="4_1ulc1"]
 [ext_resource type="Script" path="res://main_game/Options.gd" id="5_0txgh"]
@@ -18,14 +19,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_171tw")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.196078, 0.52549, 0.435294, 1)
+texture = ExtResource("2_p0db1")
 
 [node name="Overworld" type="Node2D" parent="."]
 z_index = -1
