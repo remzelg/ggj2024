@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cse64aassfoug"
+path="res://.godot/imported/well_read.dialogue-37a6dd9c3fcdcc1a620e8e49c491018e.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/well_read.dialogue"
+dest_files=["res://.godot/imported/well_read.dialogue-37a6dd9c3fcdcc1a620e8e49c491018e.tres"]
+
+[params]
+
+defaults=true

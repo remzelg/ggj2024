@@ -13,4 +13,4 @@ obs = 0
 difficulty = 30
 tags = Array[String]([])
 target = ""
-dialogue = "res://Resources/Dialogues/dive-person.dialogue"
+dialogue = "res://Resources/Dialogues/kicked_out.dialogue"

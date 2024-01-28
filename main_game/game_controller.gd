@@ -115,19 +115,6 @@ func _on_game_end():
 	get_tree().change_scene_to_file("res://showdown/showdown.tscn")
 	
 func _on_powerup(joke_id):
-	var joke
-	if joke_id == "doe-biden": # apt
-		joke = load("res://Resources/Jokes/doe-biden.tres")
-	elif joke_id == "free_drink": # bar
-		joke = load("res://Resources/Jokes/free_drink.tres")
-	elif joke_id == "shushed": # library
-		joke = load("res://Resources/Jokes/shushed.tres")
-	elif joke_id == "tacos": # cafe
-		joke = load("res://Resources/Jokes/tacos.tres")
-	elif joke_id == "diss-possum": # apt
-		joke = load("res://Resources/Jokes/diss-possum.tres")
-	elif joke_id == "dive-person": # bar
-		joke = load("res://Resources/Jokes/dive-person.tres")
-	else:
-		pass # add the joke to the big ifelse
+	var joke_path = "res://Resources/Jokes/" + joke_id + ".tres"
+	var joke = load(joke_path)
 	PlayerManager.add_joke(current_player, joke)	 

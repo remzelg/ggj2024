@@ -5,12 +5,12 @@
 [resource]
 script = ExtResource("1_e6ile")
 category = "Outsmart"
-id = "fan_recognition"
-name = "fan_recognition"
+id = ""
+name = "Joke about your fans"
 wit = 1
 pride = 5
 obs = 9
 difficulty = 5
 tags = Array[String]([])
 target = ""
-dialogue = "res://Resources/Dialogues/free_drink.dialogue"
+dialogue = "res://Resources/Dialogues/fan_recognition.dialogue"

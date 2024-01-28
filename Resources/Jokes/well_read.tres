@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://dfv6jufcvjsin"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_dofad"]
+
+[resource]
+script = ExtResource("1_dofad")
+category = "Outsmart"
+id = ""
+name = "Joke  about reading"
+wit = 2
+pride = 2
+obs = 2
+difficulty = 50
+tags = Array[String]([])
+target = ""
+dialogue = "res://Resources/Dialogues/well_read.dialogue"

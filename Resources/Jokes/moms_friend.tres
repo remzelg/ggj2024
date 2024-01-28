@@ -5,8 +5,8 @@
 [resource]
 script = ExtResource("1_spw8y")
 category = "Observe"
-id = "moms_friend"
-name = "moms_friend"
+id = ""
+name = "Joke about Mom"
 wit = 0
 pride = 0
 obs = 0
