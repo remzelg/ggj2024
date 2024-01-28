@@ -1,15 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0p7s057is5o"]
+[gd_scene load_steps=6 format=3 uid="uid://d0p7s057is5o"]
 
 [ext_resource type="Theme" uid="uid://bx0wlg6480pva" path="res://showdown/showdown_option_theme.tres" id="1_laiq5"]
 [ext_resource type="Texture2D" uid="uid://c1k1nhjfqse0w" path="res://assets/Art/41B987E5-FC84-4223-89B0-E4F40989A138.png" id="2_2vi4x"]
+[ext_resource type="Script" path="res://showdown/joke_category_choice.gd" id="3_sm8pi"]
+
+[sub_resource type="Animation" id="Animation_dotid"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(0.435275, 1, 1.7411),
+"update": 0,
+"values": [-0.0872665, 0.0872665, -0.0872665]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qccfn"]
+_data = {
+"idle": SubResource("Animation_dotid")
+}
 
 [node name="JokeCategoryChoice" type="TextureButton"]
-offset_left = -13.0
-offset_top = 0.999985
-offset_right = 63.0
-offset_bottom = 37.0
-rotation = -0.190105
+offset_left = -39.3803
+offset_top = -20.7483
+offset_right = 36.6197
+offset_bottom = 15.2517
+pivot_offset = Vector2(39.3803, 17.7483)
 theme = ExtResource("1_laiq5")
 texture_normal = ExtResource("2_2vi4x")
 ignore_texture_size = true
 stretch_mode = 5
+script = ExtResource("3_sm8pi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qccfn")
+}

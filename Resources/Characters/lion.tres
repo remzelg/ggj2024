@@ -6,6 +6,6 @@
 
 [resource]
 script = ExtResource("2_1vxxm")
-name = "Lion"
+name = "Bird"
 jokes = [ExtResource("1_rarbq")]
 stats = ExtResource("3_m6pqi")

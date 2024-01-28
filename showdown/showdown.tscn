@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bndg8lby7s2kk"]
+[gd_scene load_steps=16 format=3 uid="uid://bndg8lby7s2kk"]
 
 [ext_resource type="Script" path="res://showdown/showdown.gd" id="1_svx04"]
 [ext_resource type="Texture2D" uid="uid://bstko3k7bwre5" path="res://assets/Art/3F59F722-26A0-4A14-B182-F57373574DC1.jpeg" id="2_knugo"]
@@ -6,9 +6,13 @@
 [ext_resource type="Theme" uid="uid://co2a1cb3h1kb2" path="res://themes/Showdown/theme.tres" id="4_xncoc"]
 [ext_resource type="PackedScene" uid="uid://2vtn8mjr0n1n" path="res://showdown/popularity_bar.tscn" id="5_0j51a"]
 [ext_resource type="Script" path="res://showdown/JokeChoicePanel.gd" id="6_5qlw4"]
+[ext_resource type="Texture2D" uid="uid://bygj1p17hyynl" path="res://assets/Art/99DE88A1-1911-496B-9A05-3F681775346E.png" id="6_bpqtt"]
 [ext_resource type="PackedScene" uid="uid://d0p7s057is5o" path="res://showdown/joke_category_choice.tscn" id="6_yf8cr"]
+[ext_resource type="Texture2D" uid="uid://ddrb6g71asnxf" path="res://assets/Art/4CD18E62-F569-4D46-849C-477430EFCF19.png" id="7_1kvta"]
 [ext_resource type="PackedScene" uid="uid://c4fon5fyxs6d3" path="res://showdown/joke_option.tscn" id="7_hsgam"]
+[ext_resource type="Texture2D" uid="uid://cvcbghg8ypyia" path="res://assets/Art/F0712A88-6E7C-4B61-A410-E27EC3E1FD69.png" id="8_qcpb4"]
 [ext_resource type="AudioStream" uid="uid://ceoutl0aoyewd" path="res://assets/music/Battle Song.mp3" id="9_0a6ip"]
+[ext_resource type="Texture2D" uid="uid://m8jl0bq5j0qs" path="res://assets/Art/7AA50B42-9F93-4491-A4CC-A65958FCE7AF.png" id="9_0e2n7"]
 [ext_resource type="Texture2D" uid="uid://cmqjawt86jyq6" path="res://assets/Art/0E141DA5-2966-463B-A573-460605A71EB1.png" id="9_ycmvc"]
 [ext_resource type="Texture2D" uid="uid://bs3o62t5rgsgm" path="res://assets/Art/68F4F8A4-CBCB-4DF2-89C4-4450025D0429.png" id="9_yrw6n"]
 
@@ -36,21 +40,25 @@ metadata/_edit_lock_ = true
 [node name="Actors" type="Node" parent="2DScene"]
 
 [node name="Lion" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
+texture_filter = 1
 position = Vector2(725, 313)
 animation = &"possum_talking"
 character_name = "lion"
 
 [node name="Possum" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
+texture_filter = 1
 position = Vector2(288, 322)
 animation = &"possum_talking"
 character_name = "possum"
 
 [node name="Dolphin" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
+texture_filter = 1
 position = Vector2(978, 256)
 animation = &"dolphin_default"
 character_name = "dolphin"
 
 [node name="Bird" parent="2DScene/Actors" instance=ExtResource("3_5oegv")]
+texture_filter = 1
 position = Vector2(487, 229)
 animation = &"possum_talking"
 character_name = "bird"
@@ -77,9 +85,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -197.0
-offset_top = -180.0
-offset_bottom = 201.0
+offset_left = -294.0
+offset_top = -159.0
+offset_right = 6.0
+offset_bottom = 191.0
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("4_xncoc")
@@ -95,21 +104,35 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
+metadata/_edit_lock_ = true
 
 [node name="Row" type="HBoxContainer" parent="UI/Panel/Margin"]
 layout_mode = 2
 
-[node name="Popularity" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
+[node name="Popularity1" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
+texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+profile = ExtResource("9_0e2n7")
 
 [node name="Popularity2" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
+texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 3
+profile = ExtResource("8_qcpb4")
 
 [node name="Popularity3" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
+texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 3
+profile = ExtResource("6_bpqtt")
 
 [node name="Popularity4" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
+texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 3
+profile = ExtResource("7_1kvta")
 
 [node name="JokeBubbleContainer" type="Container" parent="UI"]
 unique_name_in_owner = true
@@ -125,9 +148,9 @@ offset_bottom = 0.319992
 
 [node name="JokeChoicePanel" type="Panel" parent="UI"]
 anchors_preset = -1
-anchor_left = 0.185156
-anchor_top = 0.573611
-anchor_right = 0.792969
+anchor_left = 0.242188
+anchor_top = 0.576389
+anchor_right = 0.749219
 anchor_bottom = 0.905556
 grow_horizontal = 2
 grow_vertical = 0

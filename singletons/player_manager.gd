@@ -7,10 +7,25 @@ var playerCount:int = 0
 # yellow is 2
 # red is 3
 # green is 4
-var players = {0: -1}
+var players = {}
 var devices = {}
-var player_resources = {0: load("res://Resources/stats/player-0-stats.tres")}
+
+var player_resources = {
+	0: load("res://Resources/stats/possum-player.tres"),
+	1: load("res://Resources/stats/bird-player.tres"),
+	2: load("res://Resources/stats/lion-player.tres"),
+	3: load("res://Resources/stats/dolphin-player.tres"),
+}
+
 var _initialized = false
+
+var name_to_player_int_map = {
+	"lion" : 3,
+	"possum" : 1,
+	"bird" : 2,
+	"dolphin" : 4
+}
+
 var player_ids:Array[int] = []
 
 func get_player_device(player_id):

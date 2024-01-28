@@ -1,10 +1,24 @@
-[gd_scene format=3 uid="uid://2vtn8mjr0n1n"]
+[gd_scene load_steps=3 format=3 uid="uid://2vtn8mjr0n1n"]
+
+[ext_resource type="Script" path="res://showdown/popularity_bar.gd" id="1_qnk6q"]
+[ext_resource type="Texture2D" uid="uid://bygj1p17hyynl" path="res://assets/Art/99DE88A1-1911-496B-9A05-3F681775346E.png" id="2_hd0pw"]
 
 [node name="PopularityBar" type="VBoxContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qnk6q")
+
+[node name="Profile" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_hd0pw")
+expand_mode = 5
+stretch_mode = 5
 
 [node name="Popularity" type="ProgressBar" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
+size_flags_vertical = 3
+show_percentage = false
