@@ -73,7 +73,9 @@ func _process(delta):
 	pass
 	
 func _input(event):
-	pass
+	if Input.is_action_pressed("ui_accept") and $UI/ConfirmPopup.visible:
+		$UI/ConfirmPopup.visible = false
+		_on_confirmation_yes()
 
 func _on_location_hovered(location):
 	tween = get_tree().create_tween()
@@ -83,15 +85,12 @@ func _on_location_selected(location_name):
 	last_location = location_name
 	$UI/ConfirmPopup.visible = true
 	$UI/ConfirmPopup.grab_focus()
-	
 
 # this is when a player's turn ends
 func _on_dialogue_exited(_resource):
 	# Save stat changes when dialogue box closes
 	var changes = EventManager.get_event_effects()
 	PlayerManager.save_stat_changes(current_player, changes)
-	var button = _button_node_from_name(last_location)
-	button.grab_focus()
 	tick()
 
 func _location_pos_from_name(location):

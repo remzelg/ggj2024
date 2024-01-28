@@ -11,10 +11,10 @@ var players = {}
 var devices = {}
 
 @onready var player_resources = {
-	0: load("res://Resources/stats/possum-player.tres"),
-	1: load("res://Resources/stats/bird-player.tres"),
-	2: load("res://Resources/stats/lion-player.tres"),
-	3: load("res://Resources/stats/dolphin-player.tres"),
+	0: load("res://Resources/stats/possum-player.tres").duplicate(true),
+	1: load("res://Resources/stats/bird-player.tres").duplicate(true),
+	2: load("res://Resources/stats/lion-player.tres").duplicate(true),
+	3: load("res://Resources/stats/dolphin-player.tres").duplicate(true),
 }
 
 var _initialized = false
@@ -41,7 +41,7 @@ func save_stat_changes(player, changes):
 	stats.wit += changes["wit"]
 	stats.pride += changes["pride"]
 	stats.obs += changes["obs"]
-	stats.delivery +- changes["delivery"]
+	stats.delivery += changes["delivery"]
 	
 	ResourceSaver.save(stats, stats.get_path())
 
