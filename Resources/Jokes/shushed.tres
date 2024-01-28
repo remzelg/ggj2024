@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://ckjuewr3jseun"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_3esdj"]
+
+[resource]
+script = ExtResource("1_3esdj")
+category = "ro"
+id = "shushed"
+name = "shush!"
+wit = 8
+pride = 1
+obs = 5
+difficulty = 5
+tags = Array[String]([])
+dialogue = null

@@ -12,7 +12,6 @@ func _ready():
 	for child in $Categories.get_children():
 		child.pressed.connect(_on_category_selected.bind(child.name))
 
-
 func _on_category_selected(category):
 	chosen_category = category
 	change_categories_visibility(false)
