@@ -33,7 +33,18 @@ func get_player_device(player_id):
 
 func set_player_resources(player_id, resource):
 	player_resources[player_id] = resource
+
+func save_stat_changes(player, changes):
+	var resource = player_resources[player]
+
+	var stats = resource.stats
+	stats.wit += changes["wit"]
+	stats.pride += changes["pride"]
+	stats.obs += changes["obs"]
+	stats.delivery +- changes["delivery"]
 	
+	ResourceSaver.save(stats, stats.get_path())
+
 func get_player_ids() -> Array[int]:
 	if !_initialized:
 		_initialized = true

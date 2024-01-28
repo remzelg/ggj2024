@@ -87,6 +87,9 @@ func _on_location_selected(location_name):
 
 # this is when a player's turn ends
 func _on_dialogue_exited(_resource):
+	# Save stat changes when dialogue box closes
+	var changes = EventManager.get_event_effects()
+	PlayerManager.save_stat_changes(current_player, changes)
 	var button = _button_node_from_name(last_location)
 	button.grab_focus()
 	tick()

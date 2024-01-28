@@ -7,3 +7,12 @@ Nathan: Here are some choices.
 	=> LIBRARY_CHOICE
 - End the conversation => END
 => END
+
+~ Library__dialogue_quieted
+Nathan: Shh!!
+Nathan: Here's a joke:
+- quieted_1
+	Nathan: Nice. I'll learn how to give you that.
+- quieted_2
+	Nathan: Nice. I'll learn how to give you that.
+=> END
