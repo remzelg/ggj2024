@@ -4,11 +4,19 @@ Nathan: Here are some choices.
 ~ BAR_CHOICE
 - Drink beer
 	Nathan: You drink a beer. Have another?
-	=> BAR_CHOICE
+	%3 => BAR_CHOICE
+	%1 => FREE_DRINK
 - Work the bar crowd
 	Nathan: ... Please don't.
 	You gain 2 wit and lose 1 pride
 	set EventManager.store_event_effects(2, -1)
 	=> END
 - End the conversation => END
+
+=> END
+
+~ FREE_DRINK
+Nathan: Take it! It's genuinely free. There are no consequences!
+Narrator: YOU'VE UNLOCKED FREE DRINK
+do DialogueHelper.emit("powerup", "free_drink")
 => END

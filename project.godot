@@ -22,7 +22,11 @@ MultiplayerInput="*res://addons/multiplayer_input/multiplayer_input.gd"
 GameSettings="*res://singletons/game_settings.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 EventManager="*res://singletons/event_manager.gd"
+<<<<<<< HEAD
 AudioManager="*res://audio_manager.gd"
+=======
+DialogueHelper="*res://singletons/dialogue_helper.gd"
+>>>>>>> 2f4e6fbcab9576f9017657a1c5f4e79eff22606c
 
 [dialogue_manager]
 

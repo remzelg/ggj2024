@@ -25,6 +25,8 @@ var turns_init = false
 func _ready():
 	DialogueManager.get_current_scene = get_ui_node
 	DialogueManager.dialogue_ended.connect(_on_dialogue_exited)
+	
+	DialogueHelper.powerup.connect(_on_powerup)
 
 	curr_pawn.position = _apartment.get_pos()
 	for button in $UI/Options/Vbox.get_children():
@@ -73,7 +75,9 @@ func _process(delta):
 	pass
 	
 func _input(event):
-	pass
+	if Input.is_action_pressed("ui_accept") and $UI/ConfirmPopup.visible:
+		$UI/ConfirmPopup.visible = false
+		_on_confirmation_yes()
 
 func _on_location_hovered(location):
 	tween = get_tree().create_tween()
@@ -83,15 +87,12 @@ func _on_location_selected(location_name):
 	last_location = location_name
 	$UI/ConfirmPopup.visible = true
 	$UI/ConfirmPopup.grab_focus()
-	
 
 # this is when a player's turn ends
 func _on_dialogue_exited(_resource):
 	# Save stat changes when dialogue box closes
 	var changes = EventManager.get_event_effects()
 	PlayerManager.save_stat_changes(current_player, changes)
-	var button = _button_node_from_name(last_location)
-	button.grab_focus()
 	tick()
 
 func _location_pos_from_name(location):
@@ -110,3 +111,21 @@ func _on_confirmation_no():
 
 func _on_game_end():
 	get_tree().change_scene_to_file("res://showdown/showdown.tscn")
+	
+func _on_powerup(joke_id):
+	var joke
+	if joke_id == "doe-biden": # apt
+		joke = load("res://Resources/Jokes/doe-biden.tres")
+	elif joke_id == "free_drink": # bar
+		joke = load("res://Resources/Jokes/free_drink.tres")
+	elif joke_id == "shushed": # library
+		joke = load("res://Resources/Jokes/shushed.tres")
+	elif joke_id == "tacos": # cafe
+		joke = load("res://Resources/Jokes/tacos.tres")
+	elif joke_id == "diss-possum": # apt
+		joke = load("res://Resources/Jokes/diss-possum.tres")
+	elif joke_id == "dive-person": # bar
+		joke = load("res://Resources/Jokes/dive-person.tres")
+	else:
+		pass # add the joke to the big ifelse
+	PlayerManager.add_joke(current_player, joke)	 

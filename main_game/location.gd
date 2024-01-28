@@ -19,5 +19,4 @@ func get_pos():
 	
 func get_event():
 	var location_name = get_name()
-	
 
