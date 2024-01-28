@@ -182,7 +182,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 alignment = 1
 profile = ExtResource("9_0e2n7")
-progress = 99
+progress = 20
 char_id = 1
 
 [node name="Popularity2" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
@@ -190,7 +190,7 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 profile = ExtResource("8_qcpb4")
-progress = 20
+progress = 10
 char_id = 2
 
 [node name="Popularity3" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
@@ -198,7 +198,7 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 profile = ExtResource("6_bpqtt")
-progress = 20
+progress = 25
 char_id = 3
 
 [node name="Popularity4" parent="UI/Panel/Margin/Row" instance=ExtResource("5_0j51a")]
@@ -206,7 +206,7 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 profile = ExtResource("7_1kvta")
-progress = 20
+progress = 40
 char_id = 4
 
 [node name="JokeBubbleContainer" type="Container" parent="UI"]
