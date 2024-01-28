@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_ogn2v")
 wit = 40
-obs = 80
-pride = 60
-delivery = 50
+obs = 30
+pride = 50
+delivery = 90
