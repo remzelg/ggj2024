@@ -25,7 +25,7 @@ var turns_init = false
 func _ready():
 	DialogueManager.get_current_scene = get_ui_node
 	DialogueManager.dialogue_ended.connect(_on_dialogue_exited)
-	
+	$AudioStreamPlayer.stream.set_loop(true)
 	DialogueHelper.powerup.connect(_on_powerup)
 
 	curr_pawn.position = _apartment.get_pos()

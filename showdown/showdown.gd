@@ -6,7 +6,7 @@ extends Control
 @onready var PopRow = $UI/Panel/Margin/Row
 
 @onready var win_screen = load("res://win_screen.tscn")
-const HIT_FACTOR = 0.01
+const HIT_FACTOR = 0.015
 var curr_player = -1
 var curr_joke_results
 
