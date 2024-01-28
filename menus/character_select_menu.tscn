@@ -1,15 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://ck13fpiwqlr6q"]
+[gd_scene load_steps=19 format=3 uid="uid://ck13fpiwqlr6q"]
 
 [ext_resource type="Theme" uid="uid://dhp4a5h1vnf4j" path="res://themes/main/main_theme.tres" id="1_5jfm0"]
 [ext_resource type="PackedScene" uid="uid://d082uyd6n863a" path="res://menus/character_selector.tscn" id="1_30g44"]
 [ext_resource type="Script" path="res://menus/character_select_menu.gd" id="2_klytr"]
+[ext_resource type="Texture2D" uid="uid://dlqjesgq2xt66" path="res://assets/Art/5D63040E-BF26-4B30-A4BD-05C59BB6CF4A.png" id="3_qsk1c"]
 [ext_resource type="Script" path="res://menus/character_selector.gd" id="4_8yt22"]
+[ext_resource type="Texture2D" uid="uid://bnpadyhi702aa" path="res://assets/Art/FD152536-B023-4C10-B482-21173C4A653A.png" id="4_m8hjg"]
 [ext_resource type="Texture2D" uid="uid://malw2y8y2wus" path="res://assets/Art/4FAEEEE3-1B29-49A1-9BE8-08AD764D1363.png" id="5_53ud7"]
 [ext_resource type="Texture2D" uid="uid://b4vik5ms5hds2" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_arrows_none.png" id="6_i1vnv"]
 [ext_resource type="Texture2D" uid="uid://depes5k2nckqw" path="res://assets/Art/570636E5-15DB-4F9D-9561-268684B9CED6.png" id="7_aflhs"]
 [ext_resource type="Texture2D" uid="uid://c4kwpguqq4pq4" path="res://assets/Art/7222411D-13A1-42FF-9FCB-43223CB7942A.png" id="8_ro1l6"]
 [ext_resource type="Texture2D" uid="uid://okikl2wt6ykl" path="res://assets/Art/24F8141A-2B5A-40CB-864C-FFB0CEE780E8.png" id="9_e5hf0"]
 [ext_resource type="AudioStream" uid="uid://cmgq4gj66lvum" path="res://assets/music/Menu.mp3" id="10_av85a"]
+[ext_resource type="Texture2D" uid="uid://7les3xr5ugdc" path="res://assets/Art/75D8BC67-D1B0-48F4-98C7-8B87064E800E.png" id="12_a540s"]
+[ext_resource type="Texture2D" uid="uid://2uiln1bfgpl7" path="res://assets/Art/355A67AB-2592-4694-9D6B-3F5B133E7F44.png" id="13_0vxln"]
+[ext_resource type="Texture2D" uid="uid://cmr55vmwxl7y8" path="res://assets/Art/36E2B545-217B-464C-B599-940AC2C02B2D.png" id="13_fnvs0"]
+[ext_resource type="Texture2D" uid="uid://b1i0n1qcp3ojx" path="res://assets/Art/74F38941-4970-42D4-ABE4-545B04157E1C.png" id="14_erk03"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ggn8h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eelm2"]
+texture = ExtResource("4_m8hjg")
 
 [node name="CharacterSelectMenu" type="Control"]
 layout_mode = 3
@@ -21,176 +32,207 @@ grow_vertical = 2
 theme = ExtResource("1_5jfm0")
 script = ExtResource("2_klytr")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.996078, 0.360784, 1, 1)
+material = SubResource("CanvasItemMaterial_ggn8h")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("3_qsk1c")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/margin_top = 47
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Row1" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(600, 0)
-layout_mode = 2
-
-[node name="EmptyContainer" type="Container" parent="MarginContainer/HBoxContainer2/Row1"]
+[node name="EmptyContainer" type="Panel" parent="."]
 custom_minimum_size = Vector2(0, 303)
 layout_mode = 2
+offset_top = 147.0
+offset_right = 512.0
+offset_bottom = 450.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_eelm2")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer2/Row1"]
+[node name="32" type="Label" parent="EmptyContainer"]
 layout_mode = 2
+offset_left = 53.0
+offset_top = 69.0
+offset_right = 468.0
+offset_bottom = 217.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Select 2-4 characters. You can select all users using the same keyboard.
+theme_override_font_sizes/font_size = 24
+text = "Select 2-4 characters. 
 
-Press A or Enter when all characters are selected to start the game"
+Press A or Enter when all characters
+ are selected to start the game"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Row2" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="EmptyContainer" type="Container" parent="MarginContainer/HBoxContainer2/Row2"]
-custom_minimum_size = Vector2(0, 165)
-layout_mode = 2
-
-[node name="CharacterSelector1" parent="MarginContainer/HBoxContainer2/Row2" instance=ExtResource("1_30g44")]
+[node name="CharacterSelector2" parent="." instance=ExtResource("1_30g44")]
 custom_minimum_size = Vector2(220, 165)
 layout_mode = 2
-size_flags_horizontal = 4
+offset_left = 798.0
+offset_top = 52.0
+offset_right = 1018.0
+offset_bottom = 217.0
 script = ExtResource("4_8yt22")
 
-[node name="CharacterSelect1" type="TextureButton" parent="MarginContainer/HBoxContainer2/Row2/CharacterSelector1"]
-layout_mode = 2
-offset_right = 220.0
-offset_bottom = 165.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("5_53ud7")
-
-[node name="Selected" type="TextureRect" parent="MarginContainer/HBoxContainer2/Row2/CharacterSelector1/CharacterSelect1"]
-visible = false
-layout_mode = 0
-offset_left = 173.0
-offset_top = 101.0
-offset_right = 237.0
-offset_bottom = 165.0
-texture = ExtResource("6_i1vnv")
-
-[node name="Row3" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="CharacterSelector2" parent="MarginContainer/HBoxContainer2/Row3" instance=ExtResource("1_30g44")]
-custom_minimum_size = Vector2(220, 165)
-layout_mode = 2
-script = ExtResource("4_8yt22")
-
-[node name="CharacterSelect2" type="TextureButton" parent="MarginContainer/HBoxContainer2/Row3/CharacterSelector2"]
+[node name="CharacterSelect2" type="TextureButton" parent="CharacterSelector2"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -110.0
-offset_top = -82.5
-offset_right = 110.0
-offset_bottom = 82.5
+offset_left = -98.0
+offset_top = -119.5
+offset_right = 122.0
+offset_bottom = 97.5
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("7_aflhs")
 
-[node name="Selected" type="TextureRect" parent="MarginContainer/HBoxContainer2/Row3/CharacterSelector2/CharacterSelect2"]
+[node name="Selected" type="TextureRect" parent="CharacterSelector2/CharacterSelect2"]
 visible = false
 layout_mode = 0
-offset_left = 70.0
-offset_top = 148.0
-offset_right = 134.0
-offset_bottom = 212.0
-texture = ExtResource("6_i1vnv")
-
-[node name="EmptyContainer" type="Container" parent="MarginContainer/HBoxContainer2/Row3"]
-custom_minimum_size = Vector2(0, 165)
-layout_mode = 2
-
-[node name="CharacterSelector3" parent="MarginContainer/HBoxContainer2/Row3" instance=ExtResource("1_30g44")]
-custom_minimum_size = Vector2(220, 165)
-layout_mode = 2
-script = ExtResource("4_8yt22")
-
-[node name="CharacterSelect3" type="TextureButton" parent="MarginContainer/HBoxContainer2/Row3/CharacterSelector3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -110.0
-offset_top = -82.5
-offset_right = 110.0
-offset_bottom = 82.5
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("8_ro1l6")
-
-[node name="Selected" type="TextureRect" parent="MarginContainer/HBoxContainer2/Row3/CharacterSelector3/CharacterSelect3"]
-visible = false
-layout_mode = 0
-offset_left = 110.0
-offset_top = 20.0
-offset_right = 174.0
-offset_bottom = 84.0
-texture = ExtResource("6_i1vnv")
-
-[node name="Row4" type="VBoxContainer" parent="MarginContainer/HBoxContainer2"]
-layout_mode = 2
-
-[node name="EmptyContainer" type="Container" parent="MarginContainer/HBoxContainer2/Row4"]
-custom_minimum_size = Vector2(0, 165)
-layout_mode = 2
-
-[node name="CharacterSelector4" parent="MarginContainer/HBoxContainer2/Row4" instance=ExtResource("1_30g44")]
-custom_minimum_size = Vector2(220, 165)
-layout_mode = 2
-script = ExtResource("4_8yt22")
-
-[node name="CharacterSelect4" type="TextureButton" parent="MarginContainer/HBoxContainer2/Row4/CharacterSelector4"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -110.0
-offset_top = -82.5
-offset_right = 110.0
-offset_bottom = 82.5
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("9_e5hf0")
-
-[node name="Selected" type="TextureRect" parent="MarginContainer/HBoxContainer2/Row4/CharacterSelector4/CharacterSelect4"]
-visible = false
-layout_mode = 0
-offset_left = 40.0
-offset_top = 110.0
-offset_right = 104.0
-offset_bottom = 174.0
+offset_left = 78.0
+offset_top = 258.0
+offset_right = 142.0
+offset_bottom = 322.0
 texture = ExtResource("6_i1vnv")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_av85a")
 autoplay = true
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/Row2/CharacterSelector1/CharacterSelect1" to="." method="_on_character_select_1_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/Row3/CharacterSelector2/CharacterSelect2" to="." method="_on_character_select_2_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/Row3/CharacterSelector3/CharacterSelect3" to="." method="_on_character_select_3_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer2/Row4/CharacterSelector4/CharacterSelect4" to="." method="_on_character_select_4_pressed"]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 628.0
+offset_right = 1011.0
+offset_bottom = 694.0
+texture = ExtResource("13_fnvs0")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1043.0
+offset_top = 416.0
+offset_right = 1292.0
+offset_bottom = 482.0
+texture = ExtResource("14_erk03")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 432.0
+offset_right = 755.0
+offset_bottom = 498.0
+texture = ExtResource("12_a540s")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 236.0
+offset_right = 1039.0
+offset_bottom = 302.0
+texture = ExtResource("13_0vxln")
+
+[node name="CharacterSelector4" parent="." instance=ExtResource("1_30g44")]
+custom_minimum_size = Vector2(220, 165)
+layout_mode = 2
+offset_left = 1059.0
+offset_top = 231.0
+offset_right = 1279.0
+offset_bottom = 396.0
+script = ExtResource("4_8yt22")
+
+[node name="CharacterSelect4" type="TextureButton" parent="CharacterSelector4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -150.5
+offset_right = 99.0
+offset_bottom = 130.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_e5hf0")
+
+[node name="Selected" type="TextureRect" parent="CharacterSelector4/CharacterSelect4"]
+visible = false
+layout_mode = 0
+offset_left = 69.0
+offset_top = 312.0
+offset_right = 133.0
+offset_bottom = 376.0
+texture = ExtResource("6_i1vnv")
+
+[node name="CharacterSelector1" parent="." instance=ExtResource("1_30g44")]
+custom_minimum_size = Vector2(220, 165)
+layout_mode = 2
+offset_left = 553.0
+offset_top = 216.0
+offset_right = 773.0
+offset_bottom = 381.0
+size_flags_horizontal = 4
+script = ExtResource("4_8yt22")
+
+[node name="CharacterSelect1" type="TextureButton" parent="CharacterSelector1"]
+layout_mode = 2
+offset_left = -30.0
+offset_top = -39.0
+offset_right = 222.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_53ud7")
+
+[node name="Selected" type="TextureRect" parent="CharacterSelector1/CharacterSelect1"]
+visible = false
+layout_mode = 0
+offset_left = 96.0
+offset_top = 289.0
+offset_right = 160.0
+offset_bottom = 353.0
+texture = ExtResource("6_i1vnv")
+
+[node name="CharacterSelector3" parent="." instance=ExtResource("1_30g44")]
+custom_minimum_size = Vector2(220, 165)
+layout_mode = 2
+offset_left = 814.0
+offset_top = 442.0
+offset_right = 1034.0
+offset_bottom = 607.0
+script = ExtResource("4_8yt22")
+
+[node name="CharacterSelect3" type="TextureButton" parent="CharacterSelector3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -153.5
+offset_right = 71.0
+offset_bottom = 128.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_ro1l6")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Selected" type="TextureRect" parent="CharacterSelector3/CharacterSelect3"]
+visible = false
+layout_mode = 0
+offset_left = 105.0
+offset_top = 282.0
+offset_right = 169.0
+offset_bottom = 346.0
+texture = ExtResource("6_i1vnv")
+
+[connection signal="pressed" from="CharacterSelector2/CharacterSelect2" to="." method="_on_character_select_2_pressed"]
+[connection signal="pressed" from="CharacterSelector4/CharacterSelect4" to="." method="_on_character_select_4_pressed"]
+[connection signal="pressed" from="CharacterSelector1/CharacterSelect1" to="." method="_on_character_select_1_pressed"]
+[connection signal="pressed" from="CharacterSelector3/CharacterSelect3" to="." method="_on_character_select_3_pressed"]

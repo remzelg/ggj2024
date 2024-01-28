@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://bewr6h7wqug80"]
+[gd_scene load_steps=8 format=3 uid="uid://bewr6h7wqug80"]
 
 [ext_resource type="Script" path="res://menus/main_menu.gd" id="1_2qsrs"]
+[ext_resource type="Texture2D" uid="uid://cxrffmqdh1upw" path="res://assets/Art/841E9B78-D6A0-4E86-BDF9-D1028AF6CAC0.png" id="2_b20fd"]
 
 [sub_resource type="Theme" id="Theme_wfcr7"]
 Label/colors/font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xx13"]
+bg_color = Color(0.584314, 0.666667, 0.843137, 1)
+
+[sub_resource type="Theme" id="Theme_2cydg"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/disabled = null
+Button/styles/normal = SubResource("StyleBoxFlat_2xx13")
 
 [sub_resource type="Animation" id="Animation_ltriq"]
 resource_name = "fade out"
@@ -50,45 +59,38 @@ grow_vertical = 2
 theme = SubResource("Theme_wfcr7")
 script = ExtResource("1_2qsrs")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_b20fd")
 
 [node name="SplashMenu" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(1000, 400)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -62.5
-offset_right = 20.0
-offset_bottom = 62.5
+anchor_bottom = 1.0
+offset_left = -241.0
+offset_top = -142.0
+offset_right = 242.0
 grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MainMenuLabel" type="Label" parent="SplashMenu"]
-layout_mode = 2
-text = "main menu"
+grow_vertical = 0
+theme = SubResource("Theme_2cydg")
 
 [node name="SplashStartButton" type="Button" parent="SplashMenu"]
-custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "start"
 
 [node name="SettingsButton" type="Button" parent="SplashMenu"]
-custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "settings"
 
 [node name="QuitButton" type="Button" parent="SplashMenu"]
-custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 text = "QUIT"
 

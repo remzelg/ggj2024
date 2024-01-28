@@ -131,7 +131,7 @@ func check_hit(joke):
 		"Roast":
 			key_stat = res.stats.pride
 			
-	return randi_range(joke.difficulty, 200) <= ((res.stats.delivery + key_stat))
+	return randi_range(1, joke.difficulty) <= randi_range(1, res.stats.delivery)
 
 func _on_player_won(ind):
 	var scene = win_screen.instantiate()

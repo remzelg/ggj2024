@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_hbnvw")
-wit = 90
+wit = 70
 obs = 10
 pride = 30
 delivery = 25
