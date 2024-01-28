@@ -32,13 +32,18 @@ func get_player_device(player_id):
 	return players[player_id]
 
 func save_stat_changes(player, changes):
-	var resource = player_resources[player]
+	var character = player_resources[player]
 
-	var stats = resource.stats
+	var stats = character.stats
 	stats.wit += changes["wit"]
 	stats.pride += changes["pride"]
 	stats.obs += changes["obs"]
 	stats.delivery += changes["delivery"]
+
+func add_joke(player, new_joke):
+	var character = player_resources[player]
+	
+	character.jokes.append(new_joke)
 
 func get_player_ids() -> Array[int]:
 	if !_initialized:

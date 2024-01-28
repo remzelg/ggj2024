@@ -109,3 +109,21 @@ func _on_confirmation_no():
 
 func _on_game_end():
 	get_tree().change_scene_to_file("res://showdown/showdown.tscn")
+	
+func add_powerup(joke_id):
+	var joke
+	if joke_id == "doe-biden":
+		joke = load("res://Resources/Jokes/doe-biden.tres")
+	elif joke_id == "free_drink":
+		joke = load("res://Resources/Jokes/free_drink.tres")
+	elif joke_id == "shushed":
+		joke = load("res://Resources/Jokes/shushed.tres")
+	elif joke_id == "tacos":
+		joke = load("res://Resources/Jokes/tacos.tres")
+	elif joke_id == "diss-possum":
+		joke = load("res://Resources/Jokes/diss-possum.tres")
+	elif joke_id == "dive-person":
+		joke = load("res://Resources/Jokes/dive-person.tres")
+	else:
+		pass # add the joke to the big ifelse
+	PlayerManager.add_joke(current_player, joke)
