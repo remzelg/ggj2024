@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://yo4x5hn3726m"
+path="res://.godot/imported/fan_recognition.dialogue-17e915e08269a80ba720c2ee3d7d1c52.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/fan_recognition.dialogue"
+dest_files=["res://.godot/imported/fan_recognition.dialogue-17e915e08269a80ba720c2ee3d7d1c52.tres"]
+
+[params]
+
+defaults=true

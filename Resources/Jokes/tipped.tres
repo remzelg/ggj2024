@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://bigmtufivhvqp"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_uawop"]
+
+[resource]
+script = ExtResource("1_uawop")
+category = "Roast"
+id = "tipped"
+name = "tipped"
+wit = 2
+pride = 2
+obs = 2
+difficulty = 50
+tags = Array[String]([])
+target = ""
+dialogue = "res://Resources/Dialogues/tipped.dialogue"

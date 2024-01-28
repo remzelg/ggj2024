@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dlo4obf2mnc1o"
+path="res://.godot/imported/shushed.dialogue-e0d805fae80423e8b9bb98466dbc3ddd.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/shushed.dialogue"
+dest_files=["res://.godot/imported/shushed.dialogue-e0d805fae80423e8b9bb98466dbc3ddd.tres"]
+
+[params]
+
+defaults=true

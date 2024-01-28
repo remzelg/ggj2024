@@ -1,22 +1,16 @@
 ~ Bar
 Nathan: [[Hi|Hello|Howdy]], welcome to the Trough!
-Nathan: Here are some choices.
+Narrator: The bartenders toupee slips a little off his head
+Nathan: So what's your drink of choice?
 ~ BAR_CHOICE
-- Drink beer
-	Nathan: You drink a beer. Have another?
-	%3 => BAR_CHOICE
-	%1 => FREE_DRINK
-- Work the bar crowd
-	Nathan: ... Please don't.
-	You gain 2 wit and lose 1 pride
-	set EventManager.store_event_effects(2, -1)
+- Compliment the bartender's toupee
+	Nathan: Aw thanks man. Have a drink, on the house.
+	do DialogueHelper.emit("powerup", "free_drink")
+	Narrator: YOU'VE UNLOCKED FREE_DRINK
+- Insult the bartender's toupee
+	Nathan: ... uh this guy's getting a little rowdy
+	do DialogueHelper.emit("powerup", "kicked_out")
+	Narrator: YOU'VE UNLOCKED KICKED_OUT
 	=> END
-- End the conversation => END
 
-=> END
-
-~ FREE_DRINK
-Nathan: Take it! It's genuinely free. There are no consequences!
-Narrator: YOU'VE UNLOCKED FREE DRINK
-do DialogueHelper.emit("powerup", "free_drink")
 => END

@@ -1,15 +1,19 @@
 ~ Apartment
-Nathan: [[Hi|Hello|Howdy]], welcome to your hovel!
-Nathan: Here are some choices.
+You spend some time in your neigborhood.
+do EventManager.store_event_effects(0, 0, 1)
+Narrator: What do you want to do?
 ~ APARTMENT_CHOICE
-- Drink beer
-	Nathan: You drink a beer from your fridge. Have another?
-	%2 => APARTMENT_CHOICE
-	%1 => DOE_BIDEN
-	%1 => DISS_POSSUM
-- End the conversation => END
+- Walk through the park
+	You run into a friend of your moms
+	do emit("powerup", "moms_friend")
+	YOU UNLOCKED MOMS FRIEND
+- Go to your favorite sandwhich shop
+	You run into a fan of your stand up
+	do emit("powerup", "fan_recognition")
+	YOU UNLOCKED FAN RECOGNITION
 => END
 
+# Unused dialogue below
 ~ DOE_BIDEN
 Narrator: A MAN STUMBLES NEAR YOU AS YOU WALK TOWARDS YOUR RENTACOFFIN.
 Joe: I'm... I'm...

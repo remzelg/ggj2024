@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://onwg5lbpwkci"
+path="res://.godot/imported/no_tip.dialogue-a952438aee9b41b78e5adcb95c8f3578.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/no_tip.dialogue"
+dest_files=["res://.godot/imported/no_tip.dialogue-a952438aee9b41b78e5adcb95c8f3578.tres"]
+
+[params]
+
+defaults=true

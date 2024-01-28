@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://vcawswq2noyl"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_uj1hu"]
+
+[resource]
+script = ExtResource("1_uj1hu")
+category = "Roast"
+id = "kicked_out"
+name = "kicked_out"
+wit = 2
+pride = 2
+obs = 2
+difficulty = 50
+tags = Array[String]([])
+target = ""
+dialogue = "res://Resources/Dialogues/kicked_out.dialogue"

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_5lw3s")
-category = "obs"
+category = "Observe"
 id = "free_drink"
 name = "free drink"
 wit = 1
@@ -13,4 +13,4 @@ obs = 9
 difficulty = 5
 tags = Array[String]([])
 target = ""
-dialogue = null
+dialogue = "res://Resources/Dialogues/free_drink.dialogue"

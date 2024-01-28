@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://18tqrwd25b5l"]
+
+[ext_resource type="Script" path="res://Resources/joke.gd" id="1_spw8y"]
+
+[resource]
+script = ExtResource("1_spw8y")
+category = "Observe"
+id = "moms_friend"
+name = "moms_friend"
+wit = 0
+pride = 0
+obs = 0
+difficulty = 20
+tags = Array[String]([])
+target = ""
+dialogue = "res://Resources/Dialogues/moms_friend.dialogue"

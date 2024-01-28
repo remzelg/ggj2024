@@ -1,9 +1,13 @@
 ~ Cafe
-Nathan: [[Hi|Hello|Howdy]], welcome to Udder Deligts!
-Nathan: Here are some choices.
+Narrator: You walk into your neigborhood cafe and order a coffee
 ~ CAFE_CHOICE
-- Drink coffee
-	Nathan: You drink a coffee. Have another?
-	=> CAFE_CHOICE
-- End the conversation => END
+- Tip the barista
+	Narrator: You give the barista a generous tip
+	do DialogueHelper.emit("powerup", "tipped")
+	Narrator: YOU'VE UNLOCKED TIPPED
+- Do not tip the barista
+	Narrator: The barista looks annoyed
+	do DialogueHelper.emit("powerup", "no_tip")
+	Narrator: YOU'VE UNLOCKED NO_TIP
+	=> END
 => END

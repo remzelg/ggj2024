@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b2wrqjpcsqev2"
+path="res://.godot/imported/free_drink.dialogue-aea0c3800e589543c4cbbc1d64083dda.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/free_drink.dialogue"
+dest_files=["res://.godot/imported/free_drink.dialogue-aea0c3800e589543c4cbbc1d64083dda.tres"]
+
+[params]
+
+defaults=true

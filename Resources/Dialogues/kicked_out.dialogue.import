@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://kk3vktnxxh3a"
+path="res://.godot/imported/kicked_out.dialogue-5b6543ff140b90c478ae30feb1eace9b.tres"
+
+[deps]
+
+source_file="res://Resources/Dialogues/kicked_out.dialogue"
+dest_files=["res://.godot/imported/kicked_out.dialogue-5b6543ff140b90c478ae30feb1eace9b.tres"]
+
+[params]
+
+defaults=true

@@ -1,9 +1,13 @@
 ~ Library
-Nathan: [[Hi|Hello|Howdy]], welcome to the Library!
+Narrator: You walk into the Library!
 Nathan: Here are some choices.
 ~ LIBRARY_CHOICE
-- Drink beer
-	Nathan: You drink a beer. In the library?? Have another?
-	=> LIBRARY_CHOICE
-- End the conversation => END
+- Talk to your friends
+	Libarian: Could you please be quiet?
+	do DialogueHelper.emit("powerup", "shushed")
+	YOU UNLOCKED SHUSHED
+- Read a book
+	Narrator: You check out a book called "How to Tell Jokes"
+	do DialogueHelper.emit("powerup", "well_read")
+	YOU UNLOCKED WELL READ
 => END
