@@ -44,8 +44,10 @@ func _build_joke(category:String, id:String, name:String, wit:int, pride:int, ob
 
 
 func _build_bar():
+	var free_drink = _build_event(Bar, [], ["dialogue:free_drink"])
+	var bar_bounce = _build_event(Bar, [], ["dialogue:bar_bounce"])
 	var bar_lion = _build_event(Bar, [], [LionTag])
-	var bar_root = _build_event(Bar, [bar_lion], [])
+	var bar_root = _build_event(Bar, [bar_lion, free_drink], [])
 	return bar_root
 
 func _build_cafe():
@@ -57,7 +59,8 @@ func _build_apartment():
 	return apt_root
 
 func _build_library():
-	var lib_root = _build_event(Library, [], [])
+	var quieted = _build_event(Library, [], ["dialogue:quieted"])
+	var lib_root = _build_event(Library, [quieted], [])
 	return lib_root
 
 func _build_event(location_name:String, events:Array[LocationEvent], tags:Array[String]):

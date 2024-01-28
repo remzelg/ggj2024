@@ -15,3 +15,21 @@ Nathan: Here are some choices.
 Nathan: Rawr! Welcome to the Trough.
 => BAR_CHOICE
 => END
+
+~ Bar__dialogue_free_drink
+Nathan: Free drink!!!!!!!!
+Nathan: Here's a joke:
+- free_drink_1
+	Nathan: Nice. I'll learn how to give you that.
+- free_drink_2
+	Nathan: Nice. I'll learn how to give you that.
+=> END
+
+~ Bar__dialogue_bar_bounce
+Nathan: Shh!!
+Nathan: Here's a joke:
+- quieted_1
+	Nathan: Nice. I'll learn how to give you that.
+- quieted_2
+	Nathan: Nice. I'll learn how to give you that.
+=> END
