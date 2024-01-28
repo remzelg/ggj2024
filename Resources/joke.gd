@@ -18,5 +18,6 @@ extends Resource
 # filters
 @export var tags:Array[String]
 
+@export var target:String
 # ???
 @export_file var dialogue

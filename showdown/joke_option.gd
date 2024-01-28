@@ -7,4 +7,4 @@ func _ready():
 
 func init(joke: Resource):
 	self.joke = joke
-	text = joke.display_name
+	text = joke.name

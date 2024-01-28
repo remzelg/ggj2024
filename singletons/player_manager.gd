@@ -10,7 +10,7 @@ var playerCount:int = 0
 var players = {}
 var devices = {}
 
-var player_resources = {
+@onready var player_resources = {
 	0: load("res://Resources/stats/possum-player.tres"),
 	1: load("res://Resources/stats/bird-player.tres"),
 	2: load("res://Resources/stats/lion-player.tres"),

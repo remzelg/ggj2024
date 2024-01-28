@@ -22,7 +22,7 @@ func _ready():
 	DialogueManager.get_current_scene = get_joke_container
 	DialogueManager.dialogue_ended.connect(_on_joke_finished)
 
-	curr_player = PlayerManager.players[0]
+	curr_player = 0
 	#DialogueManager.show_joke_balloon(example, "start")
 	$"2DScene/Actors/Lion".curr_marker = "OnDeck"
 	$"2DScene/Actors/Possum".curr_marker = "Active"
@@ -31,6 +31,7 @@ func _ready():
 
 func next_up():
 	change_positions()
+	$UI/JokeChoicePanel.show()
 
 func tween_to_next_marker(actor):
 	var next_marker = get_next_marker(actor.curr_marker)
@@ -58,11 +59,11 @@ func _on_joke_finished(_joke_dialogue):
 
 func resolve_joke():
 	tween = get_tree().create_tween()
-	var curr_player_pop = $"UI/Panel/Margin/Row/Popularity" + curr_player
-	tween.parallel().tween_property(curr_player_pop, "progress", curr_player_pop.progress + curr_joke_results.pop_inc)
-	if curr_joke_results.target:
-		var target_pop = $"UI/Panel/Margin/Row/Popularity" + curr_joke_results.target
-		tween.parallel().tween_property(target_pop, "progress", curr_joke_results.pop_hit)
+	var curr_player_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_player+1))
+	tween.parallel().tween_property(curr_player_pop, "progress", curr_player_pop.progress + curr_joke_results.pop_inc, 0.5)
+	if curr_joke_results.has("target"): 
+		var target_pop = get_node("UI/Panel/Margin/Row/Popularity" + str(curr_joke_results.target+1))
+		tween.parallel().tween_property(target_pop, "progress", curr_joke_results.pop_hit, 0.5)
 	# TODO: audience animation tween
 	tween.play()
 	await tween.finished
@@ -89,7 +90,7 @@ func calc_pop_inc(joke):
 		"Roast":
 			return joke.difficulty * res.stats.pride
 		"Observe":
-			return joke.difficulty * res.stats.observation
+			return joke.difficulty * res.stats.obs
 		"Outsmart":
 			return joke.difficulty * res.stats.wit
 
