@@ -16,9 +16,10 @@ Joe: I'm... I'm...
 Narrator: THE MAN TURNS AS A BRIGHT-EYED CARELESS YOUTH PLOWS HIM OVER.
 Narrator: YOU HAVE UNLOCKED DOE BIDEN.
 do powerup.emit("doe-biden")
+=> END
 
 ~ DISS_POSSUM
 Possum: FUCK
 do powerup.emit("diss-possum")
-Narrator: JOKE GAINED: DOE BIDEN
+Narrator: JOKE GAINED: DISS POSSUM
 => END
