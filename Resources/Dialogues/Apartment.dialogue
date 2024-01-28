@@ -4,6 +4,21 @@ Nathan: Here are some choices.
 ~ APARTMENT_CHOICE
 - Drink beer
 	Nathan: You drink a beer from your fridge. Have another?
-	=> APARTMENT_CHOICE
+	%2 => APARTMENT_CHOICE
+	%1 => DOE_BIDEN
+	%1 => DISS_POSSUM
 - End the conversation => END
+=> END
+
+~ DOE_BIDEN
+Narrator: A MAN STUMBLES NEAR YOU AS YOU WALK TOWARDS YOUR RENTACOFFIN.
+Joe: I'm... I'm...
+Narrator: THE MAN TURNS AS A BRIGHT-EYED CARELESS YOUTH PLOWS HIM OVER.
+Narrator: YOU HAVE UNLOCKED DOE BIDEN.
+do emit("powerup", "doe-biden")
+
+~ DISS_POSSUM
+Possum: FUCK
+do emit("powerup", "diss-possum")
+Narrator: JOKE GAINED: DOE BIDEN
 => END

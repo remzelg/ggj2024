@@ -25,6 +25,8 @@ var turns_init = false
 func _ready():
 	DialogueManager.get_current_scene = get_ui_node
 	DialogueManager.dialogue_ended.connect(_on_dialogue_exited)
+	
+	DialogueHelper.powerup.connect(_on_powerup)
 
 	curr_pawn.position = _apartment.get_pos()
 	for button in $UI/Options/Vbox.get_children():
@@ -110,20 +112,20 @@ func _on_confirmation_no():
 func _on_game_end():
 	get_tree().change_scene_to_file("res://showdown/showdown.tscn")
 	
-func add_powerup(joke_id):
+func _on_powerup(joke_id):
 	var joke
-	if joke_id == "doe-biden":
+	if joke_id == "doe-biden": # apt
 		joke = load("res://Resources/Jokes/doe-biden.tres")
-	elif joke_id == "free_drink":
+	elif joke_id == "free_drink": # bar
 		joke = load("res://Resources/Jokes/free_drink.tres")
-	elif joke_id == "shushed":
+	elif joke_id == "shushed": # library
 		joke = load("res://Resources/Jokes/shushed.tres")
-	elif joke_id == "tacos":
+	elif joke_id == "tacos": # cafe
 		joke = load("res://Resources/Jokes/tacos.tres")
-	elif joke_id == "diss-possum":
+	elif joke_id == "diss-possum": # apt
 		joke = load("res://Resources/Jokes/diss-possum.tres")
-	elif joke_id == "dive-person":
+	elif joke_id == "dive-person": # bar
 		joke = load("res://Resources/Jokes/dive-person.tres")
 	else:
 		pass # add the joke to the big ifelse
-	PlayerManager.add_joke(current_player, joke)
+	PlayerManager.add_joke(current_player, joke)	 
