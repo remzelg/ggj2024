@@ -1,13 +1,17 @@
-[gd_scene load_steps=10 format=3 uid="uid://62q535jvutkq"]
+[gd_scene load_steps=14 format=3 uid="uid://62q535jvutkq"]
 
 [ext_resource type="Script" path="res://main_game/game_controller.gd" id="1_171tw"]
 [ext_resource type="PackedScene" uid="uid://dlf4e2e3e3dqd" path="res://main_game/pawn.tscn" id="2_mxtet"]
 [ext_resource type="Texture2D" uid="uid://dlqjesgq2xt66" path="res://assets/Art/5D63040E-BF26-4B30-A4BD-05C59BB6CF4A.png" id="2_p0db1"]
 [ext_resource type="PackedScene" uid="uid://bec1hg1g3n68v" path="res://main_game/location.tscn" id="3_5osb3"]
 [ext_resource type="PackedScene" uid="uid://d3ovmlsn67rv5" path="res://main_game/player_card.tscn" id="4_1ulc1"]
+[ext_resource type="Texture2D" uid="uid://n31vwqjy8y7q" path="res://assets/Art/65BA3F6C-DA24-48DE-8431-9F5F45E598C7.png" id="4_cp8lb"]
 [ext_resource type="Script" path="res://main_game/Options.gd" id="5_0txgh"]
 [ext_resource type="PackedScene" uid="uid://tmeu7byt1vo6" path="res://main_game/option_button.tscn" id="5_b8djh"]
+[ext_resource type="Texture2D" uid="uid://dmarde88iyk0y" path="res://assets/Art/E0375144-5417-4924-8A66-A5A2E450650F.png" id="5_v8yv5"]
+[ext_resource type="Texture2D" uid="uid://csfvyqk8ov6bd" path="res://assets/Art/971604B0-1D98-4644-A1F1-0ADB6EBD5C23.png" id="6_8t63v"]
 [ext_resource type="PackedScene" uid="uid://dwbi7r0i4y6qr" path="res://main_game/confirm_popup.tscn" id="6_ajkyk"]
+[ext_resource type="Texture2D" uid="uid://bbilcnowvqh6b" path="res://assets/Art/57A62AFA-0864-4A48-8151-A0E2884D823D.png" id="7_6gnlm"]
 [ext_resource type="AudioStream" uid="uid://bynjbm7a6b3kk" path="res://assets/music/Townsong.mp3" id="8_8d5ve"]
 
 [node name="GameController" type="Control"]
@@ -37,21 +41,25 @@ z_index = -1
 position = Vector2(525, 141)
 animation = &"bar_default"
 animation_prefix = "bar"
+splash = ExtResource("4_cp8lb")
 
 [node name="Apartment" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(972, 178)
 animation = &"apartment_default"
 animation_prefix = "apartment"
+splash = ExtResource("5_v8yv5")
 
 [node name="Cafe" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(371, 575)
 animation = &"cafe_default"
 animation_prefix = "cafe"
+splash = ExtResource("6_8t63v")
 
 [node name="Library" parent="Overworld/Locations" instance=ExtResource("3_5osb3")]
 position = Vector2(860, 457)
 animation = &"apartment_selected"
 animation_prefix = "library"
+splash = ExtResource("7_6gnlm")
 
 [node name="Pawns" type="Node" parent="Overworld"]
 

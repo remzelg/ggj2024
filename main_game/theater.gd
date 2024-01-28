@@ -104,7 +104,8 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	is_waiting_for_input = false
 	resource = dialogue_resource
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
-
+	if extra_game_states[0]:
+		$Margins/Panel/Margins/TextureRect.texture = extra_game_states[0]
 
 ## Go to the next line
 func next(next_id: String) -> void:

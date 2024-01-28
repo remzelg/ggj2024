@@ -11,10 +11,10 @@ var players = {}
 var devices = {}
 
 @onready var player_resources = {
-	0: load("res://Resources/stats/possum-player.tres").duplicate(true),
-	1: load("res://Resources/stats/bird-player.tres").duplicate(),
-	2: load("res://Resources/stats/lion-player.tres").duplicate(),
-	3: load("res://Resources/stats/dolphin-player.tres").duplicate(),
+	1: load("res://Resources/stats/possum-player.tres").duplicate(true),
+	2: load("res://Resources/stats/bird-player.tres").duplicate(),
+	3: load("res://Resources/stats/lion-player.tres").duplicate(),
+	4: load("res://Resources/stats/dolphin-player.tres").duplicate(),
 }
 
 var _initialized = false
@@ -31,8 +31,8 @@ var player_ids:Array[int] = []
 func get_player_device(player_id):
 	return players[player_id]
 
-func save_stat_changes(player, changes):
-	var resource = player_resources[player]
+func save_stat_changes(player_id, changes):
+	var resource = player_resources[players[player_id]]
 
 	resource.stats.wit += changes["wit"]
 	resource.stats.pride += changes["pride"]
@@ -40,9 +40,8 @@ func save_stat_changes(player, changes):
 	resource.stats.delivery += changes["delivery"]
 	ResourceSaver.save(resource, resource.get_path())
 
-func add_joke(player, new_joke):
-	var character = player_resources[player]
-	
+func add_joke(player_id, new_joke):
+	var character = player_resources[players[player_id]]
 	character.jokes.append(new_joke)
 
 func get_player_ids() -> Array[int]:

@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 # Will be used to find the '_default' and '_selected' animations
 @export var animation_prefix : String
 @export var selected : bool
+@export var splash : Texture
 const _default = "_default"
 const _selected = "_selected"
 

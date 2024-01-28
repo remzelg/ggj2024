@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_p4e22")
 wit = 40
-obs = 50
-pride = 10
-delivery = 70
+obs = 10
+pride = 80
+delivery = 50

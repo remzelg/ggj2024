@@ -5,6 +5,6 @@ var joke
 func _ready():
 	pass
 
-func init(joke: Resource):
-	self.joke = joke
+func init(new_joke: Resource):
+	joke = new_joke
 	text = joke.name

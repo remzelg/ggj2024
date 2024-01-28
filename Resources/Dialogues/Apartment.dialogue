@@ -15,10 +15,10 @@ Narrator: A MAN STUMBLES NEAR YOU AS YOU WALK TOWARDS YOUR RENTACOFFIN.
 Joe: I'm... I'm...
 Narrator: THE MAN TURNS AS A BRIGHT-EYED CARELESS YOUTH PLOWS HIM OVER.
 Narrator: YOU HAVE UNLOCKED DOE BIDEN.
-do emit("powerup", "doe-biden")
+do powerup.emit("doe-biden")
 
 ~ DISS_POSSUM
 Possum: FUCK
-do emit("powerup", "diss-possum")
+do powerup.emit("diss-possum")
 Narrator: JOKE GAINED: DOE BIDEN
 => END

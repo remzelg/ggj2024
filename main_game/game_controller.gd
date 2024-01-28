@@ -52,7 +52,7 @@ func init_player(playerId:int) -> void:
 func tick() -> void:
 	if !turns_init:
 		# TODO read from settings or something
-		totalTurns = 2
+		totalTurns = 1
 		currentTurn = 1
 		playerPtr = -1
 		turns_init = true
@@ -71,9 +71,11 @@ func tick() -> void:
 	init_player(nextPlayer)
 	print("tick\n\tturns " + str(currentTurn) + "/" + str(totalTurns) + "\n\tptrs " + str(playerPtr) + " for " + str(PlayerManager.get_player_ids()) + "\n\t\t" + str(PlayerManager.playerCount))
 	
-func _process(delta):
-	pass
-	
+func get_location_node(location_name):
+	for child in $Overworld/Locations.get_children():
+		if child.name == location_name:
+			return child
+
 func _input(event):
 	if Input.is_action_pressed("ui_accept") and $UI/ConfirmPopup.visible:
 		$UI/ConfirmPopup.visible = false
@@ -104,7 +106,7 @@ func _button_node_from_name(location):
 func _on_confirmation_yes():
 	var locationEvent:LocationEvent = load("res://Resources/LocationEvents/" + last_location + ".tres")
 	locationEvent = locationEvent.for_tags(["character:" + current_pawn_name])
-	DialogueManager.show_dialogue_balloon(locationEvent.dialogue_target(), locationEvent.dialogue_title())
+	DialogueManager.show_dialogue_balloon(locationEvent.dialogue_target(), locationEvent.dialogue_title(), [get_location_node(last_location).splash])
 
 func _on_confirmation_no():
 	_button_node_from_name(last_location).grab_focus()

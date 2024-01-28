@@ -8,7 +8,7 @@ var chosen_category : String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	curr_player = PlayerManager.player_resources[0]
+	curr_player = PlayerManager.player_resources[PlayerManager.players[0]]
 	for child in $Categories.get_children():
 		child.pressed.connect(_on_category_selected.bind(child.name))
 

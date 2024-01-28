@@ -28,6 +28,7 @@ DialogueHelper="*res://singletons/dialogue_helper.gd"
 [dialogue_manager]
 
 general/balloon_path="res://main_game/theater.tscn"
+general/states=["DialogueHelper"]
 
 [display]
 

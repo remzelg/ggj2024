@@ -39,6 +39,9 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
+[node name="TextureRect" type="TextureRect" parent="Margins/Panel/Margins"]
+layout_mode = 2
+
 [node name="BubbleContainer" type="Control" parent="Margins/Panel/Margins"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
@@ -113,9 +116,6 @@ script = ExtResource("4_osnrf")
 [node name="ResponseExample" type="Button" parent="Margins/Panel/Margins/BubbleContainer/Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
-
-[node name="TextureRect" type="TextureRect" parent="Margins/Panel/Margins"]
-layout_mode = 2
 
 [connection signal="gui_input" from="Margins/Panel/Margins/BubbleContainer/Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Margins/Panel/Margins/BubbleContainer/Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
