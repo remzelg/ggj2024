@@ -29,3 +29,12 @@ func _on_player_count_back_button_pressed():
 func _on_splash_start_button_pressed():
 	$AnimationPlayer.play("fade out")
 	$SplashMenu.set_visible(false) # Replace with function body.
+
+
+func _on_credits_button_pressed():
+	$SplashMenu.set_visible(false)
+	$CreditsMenu.set_visible(true)
+
+func _on_credits_back_button_pressed():
+	$CreditsMenu.visible = false
+	$SplashMenu.visible = true # Replace with function body.

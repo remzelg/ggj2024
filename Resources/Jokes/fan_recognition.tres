@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://b7qdlg3hh2vog"]
+[gd_resource type="Resource" script_class="Joke" load_steps=2 format=3 uid="uid://jty0kp5dvbwq"]
 
 [ext_resource type="Script" path="res://Resources/joke.gd" id="1_e6ile"]
 
@@ -10,7 +10,7 @@ name = "Joke about your fans"
 wit = 1
 pride = 5
 obs = 9
-difficulty = 5
+difficulty = 40
 tags = Array[String]([])
 target = ""
 dialogue = "res://Resources/Dialogues/fan_recognition.dialogue"

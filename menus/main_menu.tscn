@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bewr6h7wqug80"]
+[gd_scene load_steps=11 format=3 uid="uid://bewr6h7wqug80"]
 
 [ext_resource type="Script" path="res://menus/main_menu.gd" id="1_2qsrs"]
 [ext_resource type="Texture2D" uid="uid://cxrffmqdh1upw" path="res://assets/Art/841E9B78-D6A0-4E86-BDF9-D1028AF6CAC0.png" id="2_b20fd"]
+[ext_resource type="Texture2D" uid="uid://bstko3k7bwre5" path="res://assets/Art/3F59F722-26A0-4A14-B182-F57373574DC1.jpeg" id="3_14btw"]
 
 [sub_resource type="Theme" id="Theme_wfcr7"]
 Label/colors/font_color = Color(0, 0, 0, 1)
@@ -13,6 +14,11 @@ bg_color = Color(0.584314, 0.666667, 0.843137, 1)
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/styles/disabled = null
 Button/styles/normal = SubResource("StyleBoxFlat_2xx13")
+
+[sub_resource type="Theme" id="Theme_v058u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_38ob1"]
+texture = ExtResource("3_14btw")
 
 [sub_resource type="Animation" id="Animation_ltriq"]
 resource_name = "fade out"
@@ -90,6 +96,10 @@ text = "start"
 layout_mode = 2
 text = "settings"
 
+[node name="CreditsButton" type="Button" parent="SplashMenu"]
+layout_mode = 2
+text = "Credits"
+
 [node name="QuitButton" type="Button" parent="SplashMenu"]
 layout_mode = 2
 text = "QUIT"
@@ -140,6 +150,81 @@ value = 60.0
 [node name="SettingsBackButton" type="Button" parent="SettingsMenu"]
 layout_mode = 2
 text = "back"
+
+[node name="CreditsMenu" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_v058u")
+theme_override_styles/panel = SubResource("StyleBoxTexture_38ob1")
+
+[node name="CreditsBackButton" type="Button" parent="CreditsMenu"]
+layout_mode = 2
+offset_left = 331.0
+offset_top = 575.0
+offset_right = 931.0
+offset_bottom = 606.0
+text = "back"
+
+[node name="Panel" type="Panel" parent="CreditsMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -407.5
+offset_top = -209.5
+offset_right = 407.5
+offset_bottom = 209.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="art" type="Label" parent="CreditsMenu/Panel"]
+layout_mode = 2
+offset_left = -95.0
+offset_top = 65.0
+offset_right = 505.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Art and Music:
+Matthew Novitsky
+
+Writing:
+Hugo Espinosa
+
+Programming:
+Harry Stebbins
+Austin Pejovich
+Remy Carr"
+horizontal_alignment = 1
+
+[node name="art4" type="Label" parent="CreditsMenu/Panel"]
+layout_mode = 2
+offset_left = 187.0
+offset_top = 70.0
+offset_right = 933.0
+offset_bottom = 437.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Special Thanks:
+
+plugins: 
+Haoyu Qi, Nathan Hoad,
+and Matt J Lars
+
+sfx: 
+Nintendo
+
+Beer:
+Modelo, PBR, HasenStüble"
+horizontal_alignment = 1
 
 [node name="PlayerCountMenu" type="VBoxContainer" parent="."]
 visible = false
@@ -199,7 +284,9 @@ color = Color(1, 1, 1, 0)
 
 [connection signal="pressed" from="SplashMenu/SplashStartButton" to="." method="_on_splash_start_button_pressed"]
 [connection signal="pressed" from="SplashMenu/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="SplashMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="SplashMenu/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/SettingsBackButton" to="." method="_on_settings_back_button_pressed"]
+[connection signal="pressed" from="CreditsMenu/CreditsBackButton" to="." method="_on_credits_back_button_pressed"]
 [connection signal="pressed" from="PlayerCountMenu/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="PlayerCountMenu/PlayerCountBackButton" to="." method="_on_player_count_back_button_pressed"]

@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://menus/character_selector.gd" id="4_8yt22"]
 [ext_resource type="Texture2D" uid="uid://bnpadyhi702aa" path="res://assets/Art/FD152536-B023-4C10-B482-21173C4A653A.png" id="4_m8hjg"]
 [ext_resource type="Texture2D" uid="uid://malw2y8y2wus" path="res://assets/Art/4FAEEEE3-1B29-49A1-9BE8-08AD764D1363.png" id="5_53ud7"]
-[ext_resource type="Texture2D" uid="uid://b4vik5ms5hds2" path="res://assets/kenney_input-prompts/Keyboard & Mouse/Default/keyboard_arrows_none.png" id="6_i1vnv"]
+[ext_resource type="Texture2D" uid="uid://b4vik5ms5hds2" path="res://assets/kenney_input-prompts/keyboard_arrows_none.png" id="6_i1vnv"]
 [ext_resource type="Texture2D" uid="uid://depes5k2nckqw" path="res://assets/Art/570636E5-15DB-4F9D-9561-268684B9CED6.png" id="7_aflhs"]
 [ext_resource type="Texture2D" uid="uid://c4kwpguqq4pq4" path="res://assets/Art/7222411D-13A1-42FF-9FCB-43223CB7942A.png" id="8_ro1l6"]
 [ext_resource type="Texture2D" uid="uid://okikl2wt6ykl" path="res://assets/Art/24F8141A-2B5A-40CB-864C-FFB0CEE780E8.png" id="9_e5hf0"]
